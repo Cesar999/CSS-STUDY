@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<Style>
+    div.image1 {
+        width: 500px;
+        height: 500px;
+        background-image: url("https://images.unsplash.com/photo-1559750965-99605627de70?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+        background-position: 38% 25%;
+        background-blend-mode: multiply;
+        background-color: floralwhite;
+        -webkit-mask: url(https://upload.wikimedia.org/wikipedia/commons/f/f9/Five_Pointed_Star_Solid.svg); 
+        -webkit-mask-repeat : no-repeat;
+        -webkit-mask-position : center 0%;
+        -webkit-mask-size: 520px;
+        -webkit-mask-origin: content-box;
+    }
+    div.image2 {
+        width: 500px;
+        height: 500px;
+        background-image: url("https://images.unsplash.com/photo-1549351236-caca0f174515?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80");
+        background-position: 58% 17%;
+        background-blend-mode: darken;
+        background-color: tomato;
+        clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+    }
+    .container {
+        display: flex;
+    }
+</Style>
+<body>
+    <div class="container">
+        <div class="image1"></div>
+        <div class="image2"></div>
+    </div>
+</body>
+</html>

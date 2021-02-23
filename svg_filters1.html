@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 98vh;
+        background: #000;
+    }
+    .container {
+        position: relative;
+        width: 800px;
+        height: 800px;
+        filter: url(#gooey);
+    }
+    .container .circle {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: white;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        background-color: #c90873;
+    }
+    .circle1 {
+        top: calc(50% - 100px);
+        left: 100px;
+    }
+
+    .circle2 {
+        top: calc(50% - 100px);
+        right: 100px;
+    }
+
+    .circle3 {
+        top: 100px;
+        right: calc(50% - 100px);
+    }
+
+    .circle4 {
+        bottom: 100px;
+        right: calc(50% - 100px);
+    }
+    
+    /* .container .circle.circle1 {
+        background: linear-gradient(90deg, #f00, #00f);
+    }
+    .container .circle.circle2 {
+        background: linear-gradient(90deg, #ff0, #c90873);
+    }
+    .container .circle.circle3 {
+        background: linear-gradient(90deg, rgb(57, 201, 21), rgb(255, 145, 0));
+    }
+    .container .circle.circle4 {
+        background: linear-gradient(90deg, rgb(255, 0, 221), #4ed2fa);
+    } */
+
+    .container .circle.circle1 {
+        animation: animate1 8s ease-in-out infinite, colors 8s ease-in-out infinite;
+    }
+    @keyframes animate1 {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(200px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+    .container .circle.circle2 {
+        animation: animate2 8s ease-in-out infinite, colors 8s ease-in-out infinite;
+    }
+    @keyframes animate2 {
+        0% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-200px);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .container .circle.circle3 {
+        animation: animate3 8s ease-in-out infinite, colors 8s ease-in-out infinite;
+    }
+    @keyframes animate3 {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(200px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    .container .circle.circle4 {
+        animation: animate4 8s ease-in-out infinite, colors 8s ease-in-out infinite;
+    }
+    @keyframes animate4 {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-200px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes colors {
+        0% {
+            background-color: #c90873;
+        }
+        25% {
+            background-color: teal;
+        }
+        50% {
+            background-color: cornflowerblue;
+        }
+        75% {
+            background-color: tomato;
+        }
+        100% {
+            background-color: #c90873;
+        }
+    }
+
+    .text {
+        animation: texts 8s ease-in-out infinite;
+    }
+
+    @keyframes texts {
+        0% {
+            opacity: 1;
+        }
+        30% {
+            opacity: 0;
+        }
+        70% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    svg {
+        width: 0;
+        height: 0;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="circle circle1"><div class="text">A</div></div>
+        <div class="circle circle2"><div class="text">E</div></div>
+        <div class="circle circle3"><div class="text">I</div></div>
+        <div class="circle circle4"><div class="text">O</div></div>
+    </div>
+    <svg>
+        <filter id="gooey">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+            <feColorMatrix in="blur" mode="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 20 -10"
+            result="gooey" />
+            <feBlend in2="gooey" in="SourceGraphic" />
+        </filter>
+    </svg>
+</body>
+</html>

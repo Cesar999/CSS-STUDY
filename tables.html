@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #mytable {
+        border: 2px solid teal;
+        border-radius: 10px;
+        border-collapse: separate;
+        border-spacing: 10px;
+        empty-cells: hide;
+        caption-side: bottom;
+    }
+    #mytable th {
+        font-weight: 600;
+        color: white;
+    }
+    #mytable thead {
+        background-color: tomato;
+    }
+    #mytable tbody th, #mytable tfoot th {
+        background-color: cornflowerblue;
+    }
+    #mytable th, #mytable td {
+        border: 2px solid teal;
+        padding: 15px;
+    }
+    #mytable td:hover {
+        background-color: teal;
+        cursor: pointer;
+        color: white;
+    }
+    #mytable thead tr th:first-child {
+        background-color: white;
+    }
+    #mytable #sometable {
+        margin: 0px;
+        width: 100%;
+    }
+    #mytable #sometable tr td {
+        padding: 0px;
+    }
+</style>
+<body>
+    <table id="mytable">
+        <caption>Pokemon</caption>
+        <thead>
+            <tr>
+                <th>
+                    <table id="sometable">
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>4</td>
+                        </tr>
+                    </table>
+                </th>
+                <th>Dark</th>
+                <th>Flying</th>
+                <th>Bug</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Rock</th>
+                <td>Tyranitar</td>
+                <td>Archeops</td>
+                <td>Armaldo</td>
+            </tr>
+            <tr>
+                <th>Water</th>
+                <td>Sharpedo</td>
+                <td>Gyarados</td>
+                <td>Golisopod</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Ghost</th>
+                <td>Sableye</td>
+                <td>Murkrow</td>
+                <td>Shedinja</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .myform {
+        width: 80vw;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(226, 226, 226);
+        border-radius: 10px;
+        padding: 25px;
+    }
+
+    input[type="text"], select, input[type="submit"], input[type="range"], input[type="date"] {
+        width: 100%;
+        padding: 10px 5px;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    input:focus {
+        box-shadow: 0 0 0 2px rgb(42, 124, 218);
+    }
+
+    label, section {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    label:first-child {
+        margin-top: 0px;
+    }
+
+    input[type="submit"] {
+        margin-top: 25px;
+        margin-bottom: 5px;
+        border: none;
+        background-color: rgb(49, 170, 49);
+        color: white;
+        border-radius: 5px;
+        font-weight: 500;
+    }
+    
+    input[type="submit"]:hover {
+        cursor: pointer;
+        background-color: rgba(49, 170, 49, 0.78);
+    }
+
+</style>
+<body>
+    <form class="myform">
+        <label for="username" name="username">Username</label>
+        <input type="text" id="username" placeholder="Your username..."/>
+
+        <label for="server">Server</label>
+        <select name="server" id="server">
+            <option value="lan">Latin America North</option>
+            <option value="las">Latin America South</option>
+            <option value="usa">USA</option>
+            <option value="eur">Europe</option>
+            <option value="asi">Asia</option>
+            <option value="aus">Australia</option>
+        </select>
+
+        <label for="start">Start Date</label>
+        <input type="date" id="start" name="start" value="2020-07-22" min="2020-01-01" max="2020-12-31">
+
+        <label for="dificulty">Dificulty</label>
+        <input type="range" id="dificulty" name="dificulty" min="1" max="100">
+
+        <section>
+            <label>
+                <input type="checkbox">
+                <span>Premium</span>
+            </label>
+            <label>
+                <input type="checkbox">
+                <span>Epic</span>
+            </label>
+        </section>
+
+        <section>
+            <label>
+                <input type="radio" name="roll" value="pve">
+                <span>PVE</span>
+            </label>
+            <label>
+                <input type="radio" name="roll" value="pvp">
+                <span>PVP</span>
+            </label>
+            <label>
+                <input type="radio" name="roll" value="rpg">
+                <span>RPG</span>
+            </label>
+        </section>
+
+        <input type="submit" value="Submit"/>
+
+    </form>
+</body>
+</html>

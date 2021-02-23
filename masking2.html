@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+ </head>
+ <style>
+     .image1 {
+        width: 500px;
+        height: 500px;
+        background-image: url("https://images.unsplash.com/photo-1559750965-99605627de70?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+        clip-path: url(#myClip);
+        background-color: burlywood;
+    }
+    .image2 {
+        width: 500px;
+        height: 500px;
+        background-image: linear-gradient(to right bottom, rgba(163, 13, 143, 0.842),rgba(163, 13, 143, 0.329)), url("https://images.unsplash.com/photo-1559750965-99605627de70?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+        background-position: 38% 25%;
+        -webkit-mask-image: -webkit-gradient(
+        linear, left top, right bottom, 
+        color-stop(0.00,  rgba(0,0,0,1)),
+        color-stop(0.9,  rgba(0,0,0,0)),
+        color-stop(1.00,  rgba(0,0,0,0)));
+    }
+    .container {
+        border: 2px solid tomato;
+        background-color: antiquewhite;
+        display: inline-block;
+        border-radius: 25px;
+        display: flex;
+        justify-content: space-evenly;
+    }     
+ </style>
+ <body>
+    <svg width="0" height="0">
+        <defs>
+          <clipPath id="myClip">
+            <circle cx="100" cy="100" r="75" />
+            <circle cx="200" cy="200" r="75" />
+            <circle cx="300" cy="300" r="75" />
+            <circle cx="400" cy="400" r="75" />
+            <circle cx="160" cy="340" r="75" />
+            <circle cx="340" cy="160" r="75" />
+            <circle cx="90" cy="420" r="75" />
+            <circle cx="420" cy="90" r="75" />
+          </clipPath>
+        </defs>
+    </svg>
+
+    <div class="container">
+        <div class="image1"></div>
+        <div class="image2"></div>
+    </div>
+
+ </body>
+ </html>

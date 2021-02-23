@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        perspective: 2000px;
+        height: 90vh;
+        width: 90vw;
+        border: 2px solid blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .element {
+        transform: rotateY(50deg);
+        transform-style: preserve-3d;
+        height: 400px;
+        width: 400px;
+        background-color: tomato;
+    }
+    .child {
+        height: 200px;
+        width: 300px;
+        background-color: teal;
+        animation: swing 3s linear infinite;
+    }
+
+    @keyframes swing {
+        0% {
+            transform: rotateX(-30deg);
+        }
+        50% {
+            transform: rotateX(30deg);
+        }
+        100% {
+            transform: rotateX(-30deg);
+        }
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="element">
+            <div class="child">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

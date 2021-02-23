@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        border: 2px solid blue;
+        text-align: center;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 5px;
+        max-width: 830px;
+        min-width: 210px;
+    }
+    
+    div[class^="item#"] {
+        padding: 5px;
+        min-width: 200px;
+    }
+
+    div[class^=item].full {
+        width: 100%;
+    }
+
+    div[class^=item].half {
+        width: calc(50% - 10px);
+    }
+
+    .item-content {
+        border: 2px solid red;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .item5 {
+        order: 1;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="item#1 full">
+            <div class="item-content">Item 1</div>
+        </div>
+        <div class="item#2 half">
+            <div class="item-content">Item 2</div>
+        </div>
+        <div class="item#3 half">
+            <div class="item-content">Item 3</div>
+        </div>
+        <div class="item#4 half">
+            <div class="item-content">Item 4</div>
+        </div>
+        <div class="item#5 half">
+            <div class="item-content">Item 5</div>
+        </div>
+        <div class="item#6 full">
+            <div class="item-content">Item 6</div>
+        </div>
+        <div class="item#7 half">
+            <div class="item-content">Item 7</div>
+        </div>
+    </div>
+</body>
+
+</html>

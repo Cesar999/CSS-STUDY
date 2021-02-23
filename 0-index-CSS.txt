@@ -1,0 +1,1357 @@
+
+
+******************************************** BASIC HTML ********************************************************************************************************************************
+
+
+HTML5
+    HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).
+
+    HTML5 is the latest evolution of the standard that defines HTML. The term represents two different concepts. It is a new version of the language HTML, with new elements, attributes, and behaviors, and a larger set of technologies that allows the building of more diverse and powerful Web sites and applications. 
+    HTML5 has a plethora of new additional features to its predecessors, such as offline media storage support, more specific content elements (like footer, header, navigation, etc.), simpler inline doctype, audio, and video embedding support.
+
+    The data-* attribute is used to store custom data private to the page or application. The data-* attribute gives us the ability to embed custom data attributes on all HTML elements.
+
+    New Semantic tags:
+        Define sections of pages
+        Defines the header of a page
+        Defines the footer of a page
+        Defines the navigation on a page
+        Defines the article or primary content on a page
+        Defines extra content like a sidebar on a page
+        Defines images that annotate an article
+
+    HTML5 supports new kinds of form controls for the input types: datetime, datetime-local, date, month, week, time, number, range, email, url.
+
+    The Canvas Element: This element gives you a drawing space in JavaScript on your web pages. It can add images or graphs to tooltips or create dynamic graphs on your web pages, built on the fly.
+
+    HTML5 supports SVG (Scalable Vector Graphics), canvas, and other virtual vector graphics.
+
+    important concepts:
+        Semantics: allowing you to describe more precisely what your content is.
+        Connectivity: allowing you to communicate with the server in new and innovative ways.
+        Offline and storage: allowing webpages to store data on the client-side locally and operate offline more efficiently.
+        Multimedia: making video and audio first-class citizens in the Open Web.
+        2D/3D graphics and effects: allowing a much more diverse range of presentation options.
+        Performance and integration: providing greater speed optimization and better usage of computer hardware.
+        Device access: allowing for the usage of various input and output devices.
+        Styling: letting authors write more sophisticated themes.
+
+Metadata
+    The HTML !DOCTYPE tag is the very first thing that every compliant web document should have. It's purpose is to inform the browser the type of document it's about to process.
+    In HTML5, the !DOCTYPE declaration remains only for legacy reasons pertaining processing modes in browsers. The Document Type Declaration (DTD) is unique for each version of HTML and must be written exactly as it is, to be of some use. For this reason, it's better if you just copy and paste the code for the declararion you're about to use.
+        HTML5: <!DOCTYPE html>
+
+    The HTML charset Attribute is used to specify the character encoding for the HTML document. The charset attribute could be overridden by using the lang attribute of any element.
+    <meta charset="character_set">
+    Common values:
+        UTF-8 - Character encoding for Unicode
+        ISO-8859-1 - Character encoding for the Latin alphabet
+
+    What is The Viewport?
+        The viewport is the user's visible area of a web page.
+        The viewport varies with the device, and will be smaller on a mobile phone than on a computer screen.
+        Before tablets and mobile phones, web pages were designed only for computer screens, and it was common for web pages to have a static design and a fixed size.
+        Then, when we started surfing the internet using tablets and mobile phones, fixed size web pages were too large to fit the viewport. To fix this, browsers on those devices scaled down the entire web page to fit the screen.
+
+        HTML5 introduced a method to let web designers take control over the viewport, through the <meta> tag.
+        You should include the following <meta> viewport element in all your web pages:
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        This gives the browser instructions on how to control the page's dimensions and scaling.
+        The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+        The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+
+        This means that the browser will (probably) render the width of the page at the width of its own screen. So if that screen is 320px wide, the browser window will be 320px wide, rather than way zoomed out and showing 960px (or whatever that device does by default, in lieu of a responsive meta tag).
+    
+TAGS?
+
+    <html>: The <html> tag represents the root of an HTML document. The <html> tag is the container for all other HTML elements (except for the <!DOCTYPE> tag). Note: You should always include the lang attribute inside the <html> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.
+
+    <head>: The <head> element is a container for metadata (data about data) and is placed between the <html> tag and the <body> tag. Metadata is data about the HTML document. Metadata is not displayed. Metadata typically define the document title, character set, styles, scripts, and other meta information.
+    The following elements can go inside the <head> element:
+        <title> (required in every HTML document)
+        <meta>
+        <style>
+        <link>
+        <script>
+
+    <title>: The <title> tag defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab.
+        The <title> tag is required in HTML documents!
+        The contents of a page title is very important for search engine optimization (SEO)! The page title is used by search engine algorithms to decide the order when listing pages in search results.
+
+        The <title> element:
+            defines a title in the browser toolbar
+            provides a title for the page when it is added to favorites
+            displays a title for the page in search-engine results
+
+            Here are some tips for creating good titles:
+                descriptive title (avoid one- or two-word titles)
+                Search engines will display about 50-60 characters of the title, so try not to have titles longer than that
+                Do not use just a list of words as the title (this may reduce the page's position in search results)
+                So, try to make the title as accurate and meaningful as possible!
+
+        Note: You can NOT have more than one <title> element in an HTML document.
+
+    <body>: The <body> tag defines the document's body. The <body> element contains all the contents of an HTML document, such as headings, paragraphs, images, hyperlinks, tables, lists, etc. Note: There can only be one <body> element in an HTML document.
+
+    <meta>: The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data.
+    <meta> tags always go inside the <head> element, and are typically used to specify character set, page description, keywords, author of the document, and viewport settings.
+    Metadata will not be displayed on the page, but is machine parsable.
+    Metadata is used by browsers (how to display content or reload page), search engines (keywords), and other web services.
+
+    <style>: The <style> tag is used to define style information (CSS) for a document. Inside the <style> element you specify how HTML elements should render in a browser.
+
+    <link>: The <link> tag defines the relationship between the current document and an external resource. The <link> tag is most often used to link to external style sheets. The <link> element is an empty element, it contains attributes only.
+        rel: Required. Specifies the relationship between the current document and the linked document. rel="stylesheet".
+        type: Specifies the media type of the linked document.
+        href: Specifies the location of the linked document.
+
+    core tags:
+        <html>	Defines the root of an HTML document
+        <head>	Contains metadata/information for the document
+        <meta>	Defines metadata about an HTML document
+        <title>	Defines a title for the document
+        <link>	Defines the relationship between a document and an external resource (most used to link to style sheets)
+        <style>	Defines style information for a document
+
+    most common tags:
+        <div>	Defines a section in a document
+        <span>	Defines a section in a document
+        <main>	Specifies the main content of a document
+        <section>	Defines a section in a document
+        <nav>	Defines navigation links
+        <a>	Defines a hyperlink
+        <h1> to <h6>	Defines HTML headings
+        <p>	Defines a paragraph
+        <header>	Defines a header for a document or section
+        <footer>	Defines a footer for a document or section
+
+    text content tag:
+        <sup>	Defines superscripted text
+        <sub>	Defines subscripted text
+        <strong>	Defines important text
+        <em>	Defines emphasized text 
+
+    media tags:
+        <figure>	Specifies self-contained content
+        <figcaption>	Defines a caption for a <figure> element
+        <img>	Defines an image
+        <audio>	Defines embedded sound content
+        <video>	Defines embedded video content
+
+    lists tags:
+        <ul>	Defines an unordered list
+        <ol>	Defines an ordered list
+        <li>	Defines a list item
+
+    table tags:
+        <table>	Defines a table
+        <thead>	Groups the header content in a table
+        <tbody>	Groups the body content in a table
+        <tfoot>	Groups the footer content in a table
+        <th>	Defines a header cell in a table
+        <tr>	Defines a row in a table
+        <td>	Defines a cell in a table
+
+    forms and inputs tags:
+        <form>	Defines an HTML form for user input
+        <input>	Defines an input control
+        <button>	Defines a clickable button
+        <textarea>	Defines a multiline input control (text area)
+        <fieldset>	Groups related elements in a form
+        <select>	Defines a drop-down list
+        <option>	Defines an option in a drop-down list
+        <label>     Screen reader users (will read out loud the label, when the user is focused on the element). 
+                    Users who have difficulty clicking on very small regions (such as  checkboxes) - because when a user clicks the text within the <label> element, it toggles the input (this increases the hit area).
+
+    other tags:
+        <script>	Defines a client-side script
+        <svg>	Defines a container for SVG graphics
+        <canvas>	Used to draw graphics, on the fly, via scripting (usually JavaScript)
+        <template>	Defines a container for content that should be hidden when the page loads
+
+    .\CSS\tags.html
+    .\CSS\list.html
+    .\CSS\tables.html
+    .\CSS\forms.html
+
+entities, symbols and codes?
+    An HTML entity is a piece of text ("string") that begins with an ampersand (&) and ends with a semicolon (;) . Entities are frequently used to display reserved characters (which would otherwise be interpreted as HTML code), and invisible characters (like non-breaking spaces). You can also use them in place of other characters that are difficult to type with a standard keyboard. 
+
+    there are five formats: Unicode, Hex code, HTML code, HTML entity and .
+    copyright sign:
+        U+000A9 UNICODE
+        &#xA9; HEX CODE
+        &#169; HTML CODE
+        &copy; HTML ENTITY
+        "\00A9" UTF-16
+
+    most common entities: 
+        non-breaking space	&nbsp;	&#160;
+        <	less than	&lt;	&#60;
+        >	greater than	&gt;	&#62;
+        &	ampersand	&amp;	&#38;
+        "	double quotation mark	&quot;	&#34;
+        '	single quotation mark (apostrophe)	&apos;	&#39;
+        ©	copyright	&copy;	&#169;
+        ®	registered trademark	&reg;	&#174;
+        –	En dash &ndash;	&#8211;	
+        —	Em dash &mdash;	&#8212;	
+
+    other entities:
+        star-fill: &starf; "\2605"
+        star-empty: &star; "\2606"
+        note-eighth: "\266B"
+        note-sixteenth: "\266C"
+        male-sign: &male; "\2642"
+        female-sign: &female; "\2640"
+        airplane: "\2708"
+        checkmark: &check; "\2713"
+        heavy checkmark: "\2714"
+        x: "\2715"
+        heavy x: "\2715"
+        envelope: "\2709"
+
+    Advantage of using an entity name: An entity name is easy to remember.
+    Disadvantage of using an entity name: Browsers may not support all entity names, but the support for entity numbers is good
+
+accessibility?
+    HTML Accessibility:
+        Always write HTML code with accessibility in mind!
+        Provide the user a good way to navigate and interact with your site. Make your HTML code as semantic as possible.
+
+    Semantic HTML:
+        Semantic HTML means using correct HTML elements for their correct purpose as much as possible. Semantic elements are elements with a meaning; if you need a button, use the <button> element (and not a <div> element).
+
+    Semantic HTML gives context to screen readers, which read the contents of a page out loud.
+
+    With the button example in mind: buttons have more suitable styling by default a screen reader identifies it as a button focusable or clickable. A button is also accessible for people relying on keyboard-only navigation; it can be clickable with both mouse and keys, and it can be tabbed between (using the tab key on the keyboard).
+
+    Examples of non-semantic elements: <div> and <span> - Tells nothing about its content.
+    Examples of semantic elements: <form>, <table>, and <article> - Clearly defines its content.
+
+    Headings are improtant: Search engines use the headings to index the structure and content of your web pages. Users skim your pages by its headings. It is important to use headings to show the document structure and the relationships between different sections. <h1> headings should be used for main headings, followed by <h2> headings, then the less important <h3>, and so on. Note: Use HTML headings for headings only. Don't use headings to make text BIG or bold.
+
+    Alternative Text: The alt attribute provides an alternate text for an image, if the user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).
+
+    Five areas of accessibility: 
+        Page structure
+        Labelling of elements
+        Keyboard navigation
+        Aural experience
+        General usability
+
+    What is the Americans with Disabilities Act (ADA)? The Americans with Disabilities Act (ADA) became law in 1990. The ADA is a civil rights law that prohibits discrimination against individuals with disabilities in all areas of public life, including jobs, schools, transportation, and all public and private places that are open to the general public. The purpose of the law is to make sure that people with disabilities have the same rights and opportunities as everyone else. 
+
+    Accessible Rich Internet Applications (ARIA) is a set of attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities. ARIA is a set of attributes that you can add to HTML elements.
+
+
+    Roles — These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of HTML5 structural elements e.g. role="navigation" (<nav>) or role="complementary" (<aside>), but there are also others that describe different pages structures, such as role="banner", role="search", role="tabgroup", role="tab", etc., which are commonly found in UIs.
+
+    Properties — These define properties of elements, which can be used to give them extra meaning or semantics. As an example, aria-required="true" specifies that a form input needs to be filled in to be valid, whereas aria-labelledby="label" allows you to put an ID on an element, then reference it as being the label for anything else on the page, including multiple elements, which is not possible using <label for="input">. As an example, you could use aria-labelledby to specify that a key description contained in a <div> is the label for multiple table cells, or you could use it as an alternative to image alt text — specify existing information on the page as an image's alt text, rather than having to repeat it inside the alt attribute. You can see an example of this at Text alternatives.
+
+    States — Special properties that define the current conditions of elements, such as aria-disabled="true", which specifies to a screenreader that a form input is currently disabled. States differ from properties in that properties don't change throughout the lifecycle of an app, whereas states can change, generally programmatically via JavaScript.
+
+
+    roles:
+        role="checkbox": The checkbox role is used for checkable interactive controls. Elements containing role="checkbox" must also include the aria-checked attribute to expose the checkbox's state to assistive technology.
+
+        role="button": The button role should be used for clickable elements that trigger a response when activated by the user. Adding role="button" will make an element appear as a button control to a screen reader. 
+
+        role="presentation": The presentation role is used to remove semantic meaning from an element and any of its related child elements. For example, a table used for layout purposes could have the presentation role applied to the table element to remove any semantic meaning from the table element and any of its table related children elements, such as table headers and table data elements.
+
+        role="banner": A banner role represents general and informative content frequently placed at the beginning of the page. This usually includes a logo, company name, search icon, photo related to the page, or slogan.
+
+        role="link": The link role is used to identify an element that creates a hyperlink to a resource that is in the application or external. When this role is added to an element, tab can be used to change focus to the link, and enter used to execute the link.
+
+        role="group": The group role is used to identify a set of user interface objects which, in contrast with a region, are not intended to be included in a table of contents or a page summary (such as the structures that are dynamically created by a script or assistive technologies); a group should not be considered a major perceivable section on a page. When the role is added to an element, the browser will send out an accessible group event to assistive technology products which can then notify the user about it. A group should be used to form a logical collection of items with related functionality, such as children in a tree widget forming a collection of siblings in a hierarchy, or a collection of items having the same container in a directory. However, when a group is used in the context of list, authors must limit its children to listitem elements. Group elements may be nested.
+
+        role="textbox": The textbox role is used to identify an element that allows the input of free-form text. Whenever possible, rather than using this role, use an <input> element with type="text", for single-line input, or a <textarea> element for multi-line input.
+
+        role="table": The table value of the ARIA role attribute identifies the element containing the role as having a non-interactive table structure containing data arranged in rows and columns, similar to the native <table> HTML element.
+
+        role="row": An element with role="row" is a row of cells within a tabular structure. A row contains one or more cells,  grid cells or column headers, and possibly a row header, within a grid, table or treegrid, and optionally within a rowgroup.
+
+        role="columnheader": The columnheader establishes a relationship between it and all cells in the corresponding column. It is the structural equivalent to an HTML th element with a column scope.
+
+        role="form": The form landmark role can be used to identify a group of elements on a page that provide equivalent functionality to an HTML form.
+
+    Properties:
+        aria-label: The aria-label attribute is used to define a string that labels the current element. Use it in cases where a text label is not visible on the screen. If there is visible text labeling the element, use aria-labelledby instead.
+
+        aria-labelledby: The aria-labelledby attribute establishes relationships between objects and their label(s), and its value should be one or more element IDs, which refer to elements that have the text needed for labeling. List multiple element IDs in a space delimited fashion.
+
+        aria-describedby: The aria-describedby attribute is used to indicate the IDs of the elements that describe the object. It is used to establish a relationship between widgets or groups and text that described them. 
+
+    States:
+        aria-disabled: Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. See related aria-hidden and aria-readonly.
+
+        aria-hiiden: Adding aria-hidden="true" to an element removes that element and all of its children from the accessibility tree.  Using aria-hidden="false" will not re-expose the element to assistive technology if any of its parents specify aria-hidden="true". This can improve the experience for assistive technology users by hiding:
+            purely decorative content, such as icons or images
+            duplicated content, such as repeated text
+            offscreen or collapsed content, such as menus
+       
+        aria-readonly: Indicates that the element is not editable, but is otherwise operable. This means the user can read but not set the value of the widget. Readonly elements are relevant to the user, and application authors SHOULD NOT restrict navigation to the element or its focusable descendants.
+
+tab-index?
+    The tabindex global attribute indicates if its element can be focused, and if/where it participates in sequential keyboard navigation (usually with the Tab key, hence the name). makes them tabbleable. Avoid using the tabindex attribute in conjunction with non-interactive content to make something intended to be interactive focusable by keyboard input.
+
+    tabindex="-1": A negative value (usually tabindex="-1") means that the element is not reachable via sequential keyboard navigation, but could be focused with Javascript or visually by clicking with the mouse. It's mostly useful to create accessible widgets with JavaScript.
+
+    tabindex="0": This value means that the element should be focusable in sequential keyboard navigation, after any positive tabindex values and its order is defined by the document's source order.
+
+    tabindex="1": A positive value means the element should be focusable in sequential keyboard navigation, with its order defined by the value of the number. That is, tabindex="4" is focused before tabindex="5" and tabindex="0", but after tabindex="3". If multiple elements share the same positive tabindex value, their order relative to each other follows their position in the document source. 
+
+    .\CSS\tabindex.html
+
+inputs types/attributes?
+
+    The HTML <input> element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent. The <input> element is one of the most powerful and complex in all of HTML due to the sheer number of combinations of input types and attributes.
+
+    types: How an <input> works varies considerably depending on the value of its type attribute, hence the different types are covered in their own separate reference pages. If this attribute is not specified, the default type adopted is text.
+
+        button: A push button with no default behavior displaying the value of the value attribute, empty by default.
+        checkbox: A check box allowing single values to be selected/deselected.
+        date: A control for entering a date (year, month, and day, with no time). Opens a date picker or numeric wheels for year, month, day when active in supporting browsers.
+        email: A field for editing an email address. Looks like a text input, but has validation parameters and relevant keyboard in supporting browsers and devices with dynamic keyboards.
+        file: A control that lets the user select a file. Use the accept attribute to define the types of files that the control can select.
+        image: A graphical submit button. Displays an image defined by the src attribute. The alt attribute displays if the image src is missing.
+        number: A control for entering a number. Displays a spinner and adds default validation when supported. Displays a numeric keypad in some devices with dynamic keypads.
+        password: A single-line text field whose value is obscured. Will alert user if site is not secure.
+        radio: A radio button, allowing a single value to be selected out of multiple choices with the same name value.
+        range: A control for entering a number whose exact value is not important. Displays as a range widget defaulting to the middle value. Used in conjunction min and max to define the range of acceptable values.
+        submit: A button that submits the form.
+        text: The default value. A single-line text field. Line-breaks are automatically removed from the input value.
+        search: A single-line text field for entering search strings. Line-breaks are automatically removed from the input value. May include a delete icon in supporting browsers that can be used to clear the field. Displays a search icon instead of enter key on some devices with dynamic keypads.
+
+    attributes: The attributes have an effect on only a specific subset of input types. In addition, the way some attributes impact an input depends on the input type, impacting different input types in different ways.
+
+        autofocus - all	- Automatically focus the form control when the page is loaded
+        disabled - all - Whether the form control is disabled
+        name - all - Name of the form control. Submitted with the form as part of a name/value pair.
+        required - almost all - Boolean. A value is required or must be check for the form to be submittable
+        value - all - Current value of the form control. Submitted with the form as part of a name/value pair.
+        size - email, password, tel, text	Size of the control
+
+    .\CSS\forms.html
+
+    There are CSS selectors that can specification target form controls based on their UI features, also known as UI pseudo-classes. The input element can also be targeted by type with attribute selectors.
+
+        :enabled: Any currently enabled element that can be activated (selected, clicked on, typed into, etc.) or accept focus and also has a disabled state, in which it can't be activated or accept focus.
+
+        :disabled: Any currently disabled element that has an enabled state, meaning it otherwise could be activated (selected, clicked on, typed into, etc.) or accept focus were it not disabled.
+
+        :checked: Matches checkbox and radio input types that are currently checked (and the (<option> in a <select> that is currently selected).
+
+        :valid: Form controls that can have constraint validation applied and are currently valid.
+
+        :invalid: Form controls that have constraint validation applied and are currently not valid. Matches a form control whose value doesn't match the constraints set on it by it's attributes, such as required, pattern , step and max.
+
+data-* (custom properties)?
+    Custom Data Attributes allow you to add your own information to tags in HTML. Even though the name suggests otherwise, these are not specific to HTML5 and you can use the data-* attribute on all HTML elements.
+    The data-* attributes can be used to define our own custom data attributes. It is used to store custom data in private to the page or application.
+
+    There are mainly 2 parts of the Data Attributes:
+        Attribute Name: Must be at least one character long, contain no capital letters and be prefixed with ‘data-‘.
+        Attribute Value: Can be any string.
+
+    Any attribute on any element whose attribute name starts with data- is a data attribute. Say you have an article and you want to store some extra information that doesn’t have any visual representation. data-*. Examples:
+        data-columns="3"
+        data-index-number="12314"
+        data-parent="cars"
+
+    Note that, as data attributes are plain HTML attributes, you can even access them from CSS.
+
+
+
+******************************************** CSS ********************************************************************************************************************************
+
+
+
+What is CSS?
+    CSS stands for Cascading Style Sheet. It is a styling language which is used with HTML to design websites. It specifies the document’s styles, layouts, colors, and fonts.
+
+    There are three ways of inserting a style sheet:
+        External CSS
+        Internal CSS
+        Inline CSS
+
+    External CSS: With an external style sheet, you can change the look of an entire website by changing just one file!: Each HTML page must include a reference to the external style sheet file inside the <link> element, inside the head section. <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+    Internal CSS: An internal style sheet may be used if one single HTML page has a unique style. The internal style is defined inside the <style> element, inside the head section. 
+    <style>body{background-color: linen;}</style>
+
+    Inline CSS: An inline style may be used to apply a unique style for a single element. To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property. <h1 style="color:blue;text-align:center;">This is a heading</h1>
+
+Selectors?
+    Simple selectors: Match one or more elements based on element type, class, or id.
+
+    Attribute selectors: Match one or more elements based on their attributes/attribute values.
+
+    Pseudo-classes: Match one or more elements that exist in a certain state, such as an element that is being hovered over by the mouse pointer, or a checkbox that is currently disabled or checked, or an element that is the first child of its parent in the DOM tree. 
+    Pseudo-classes select regular elements but under certain conditions, like when their position relative to siblings or when they’re under a particular state. Here is a list of pseudo-classes in CSS3:
+    :link, :visited, :hover, :active, :focus, :enabled, :disabled, :checked, :first-child, :nth-child(n).
+
+    Pseudo-elements: Match one or more parts of content that are in a certain position in relation to an element, for example the first word of each paragraph, or generated content appearing just before an element. Pseudo-elements effectively create new elements that are not specified in the markup of the document and can be manipulated much like a regular element. This introduces huge benefits for creating cool effects with minimal markup, also aiding significantly in keeping the presentation of the document out of the HTML and in CSS where it belongs.
+    Here is a list of pseudo-elements in CSS3:
+    ::before, ::after, ::first-letter, ::first-line.
+
+    Combinators: These are not exactly selectors themselves, but ways of combining two or more selectors in useful ways for very specific selections. So for example, you could select only paragraphs that are direct descendants of divs, or paragraphs that come directly after headings.
+
+    Multiple selectors: These are not separate selectors; the idea is that you can put multiple selectors on the same CSS rule, separated by commas, to apply a single set of declarations to all the elements selected by those selectors.
+
+    .\CSS\selectors.html
+
+Specificity?
+    Specificity is a weight that is applied to a given CSS declaration, determined by the number of each selector type in the matching selector. When multiple declarations have equal specificity, the last declaration found in the CSS is applied to the element. Specificity only applies when the same element is targeted by multiple declarations.
+
+    !important
+    inline styles
+    id = 100
+    class, attributes and pseudo-classes = 10
+    element and pseudo-elements = 1
+
+    !Important is an automatic win. Override other specificity.
+    Style attribute → id → (Class, pseudo-class, attribute) → (element, pseudo-element)
+    The universal selector * has no specificity value.
+
+     .\CSS\selectors.html
+
+CSS units of measurement?
+    CSS supports a number of measurements including absolute units such as inches, centimeters, points, and so on, as well as relative measures such as percentages and em units. Some of these units are:
+    px	Defines a measurement in screen pixels.
+    %	Defines a measurement as a percentage relative to another value, typically an enclosing element.
+    em	relative to the font size of its direct or nearest parent.
+    rem is only relative to the html (root) font-size.
+    vh	1% of viewport height.	
+    vw	1% of viewport width.
+    cm	Defines a measurement in centimeters.
+    in	Defines a measurement in inches.
+    For Screen I recommend to use %, em and px. For print documents cm, in and em.
+
+Display Property?
+    The display CSS property specifies the type of rendering box used for an element.
+
+    inline:	Displays an element as an inline element (like <span>). Any height and width properties will have no effect. Elements are place horizontally next to each other.
+
+    block:	Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width. Elements are place vertically next to each other.
+
+    inline-block: Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values.
+
+    contents: Makes the container disappear, making the child elements children of the element the next level up in the DOM.
+
+    flex:	Displays an element as a block-level flex container.
+
+    grid:	Displays an element as a block-level grid container.
+
+    none:	The element is completely removed.
+
+    .\CSS\display.html
+
+Position Property?
+    This property sets how an element is positioned in a document.
+
+    Static: Element is not positioned in any special way; it is always positioned according to the normal flow of the page and it is not affected by the top, bottom, left, and right properties.
+
+    Relative: Element is positioned relative to its normal position. Setting the top, right, bottom and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+
+    Fixed: Element is positioned relative to the viewport, which means it always stays in the same place even  if the page is scrolled. The top, right, bottom, and left properties are used to position the element. The element does not leave a gap in the page where it would normally have been located. Removed from the normal flow.
+
+    Absolute: Element is positioned relative to the nearest positioned ancestor.
+    However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
+
+    Sticky: Element is positioned based on the user's scroll position. The element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the view-port then it "sticks" in place (like position:fixed).
+
+    .\CSS\position.html
+    .\CSS\sticky.html
+
+    Within a stacking context, child elements are stacked according to the same rules previously explained. Importantly, the z-index values of its child stacking contexts only have meaning in this parent. Stacking contexts are treated atomically as a single unit in the parent stacking context.
+
+Box model?
+    All HTML elements can be considered as boxes. In CSS, the term "box model" is used when talking about design and layout.
+    The CSS box model is essentially a box that wraps around every HTML element. It consists of: margins, borders, padding, and the actual content.
+
+    Content - The content of the box, where text and images appear
+    Padding - Clears an area around the content. The padding is transparent
+    Border - A border that goes around the padding and margin
+    Margin - Clears an area outside the border. The margin is transparent
+
+    .\CSS\boxmodel.html
+
+Box-Sizing?
+    When you set the width and height properties of an element with CSS, you just set the width and height of the content area. To calculate the full size of an element, you must also add padding, borders and margins.
+
+    The box-sizing CSS property sets how the total width and height of an element is calculated.
+
+    box-sizing: content-box: defines the exact width and height of the content plus padding and border.
+    box-sizing: border-box: defines the width and height is the sum of content, border and padding, this shrinks the content.
+
+    .\CSS\boxsizing.html
+
+Margin collapse?
+    Top and bottom margins of elements are collapsed into a single margin that is equal to the largest of the two margins.
+
+    Margin collapse only happens vertically.
+    It only happens to block-level elements — this does not include inline-block elements.
+    It only happens if the elements come in direct contact with each other.
+
+    in order to remove the margin collapse the elements should be separated by padding, borders, line boxes, etc, or be in a different formatting.
+
+    The bottom margin of an element collapses with the top margin of its proceeding sibling.
+    The top or bottom margin of an element collapses when it touches the margin of its first child element.
+    If an element has no height, padding, or border and all of its children elements’ margins collapse, it will take up no (vertical) space.
+
+    .\CSS\boxmodel.html
+
+border-radius?
+    The border-radius CSS property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
+    This property allows you to add rounded corners to elements! 
+
+    /* Radius is set for all 4 sides */
+    border-radius: 10px;
+
+    /* top-left-and-bottom-right | top-right-and-bottom-left */
+    border-radius: 10px 5%;
+
+    /* top-left | top-right-and-bottom-left | bottom-right */
+    border-radius: 2px 4px 2px;
+
+    /* top-left | top-right | bottom-right | bottom-left */
+    border-radius: 1px 0 3px 4px;
+
+    /* The syntax of the second radius allows one to four values */
+    /* (first radius values) / radius */
+    border-radius: 10px 5% / 20px;
+
+    .\CSS\border.html
+
+box-shadow?
+    The box-shadow CSS property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radii, and color.
+    blur-radius the larger this value, the bigger the blur, so the shadow becomes bigger and lighter. Negative values are not allowed. 
+    spread-radius the positive values will cause the shadow to expand and grow bigger, negative values will cause the shadow to shrink.
+
+    /* offset-x | offset-y | color */
+    box-shadow: 60px -16px teal;
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 10px 5px 5px black;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+    box-shadow: 0 20px 0 #f3f3f3, 0 40px 0 #cc0000;
+
+    .\CSS\boxshadow.html
+
+What are gradients in CSS?
+    It is a property of CSS which allows you to display a smooth transformation between two or more than specified colors.
+    You use the gradients functions using backgorund-image or background.
+
+    There are two types of gradients that are present in CSS. They are:
+    Linear Gradients (goes down/up/left/right/diagonally)
+    Radial Gradients (defined by their center)
+
+    The linear-gradient() CSS function creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the <gradient> data type, which is a special kind of <image>.
+
+    linear-gradient(direction, color-stop1, color-stop2, ...);
+
+        linear-gradient() = linear-gradient(
+        [ <angle> | to <side-or-corner> ]? ,
+        <color-stop-list>
+        )
+
+        <side-or-corner> = [left | right] || [top | bottom]
+
+        background-image: linear-gradient(direction, color-stop1, color-stop2, ...);
+
+        // Explicitly declare the direction 
+        background-image: linear-gradient(to bottom, red, #f06d06);
+
+        // Explicitly declare the angle, in degrees
+        background-image: linear-gradient(72deg, red, #f06d06);
+
+    The radial-gradient() CSS function creates an image consisting of a progressive transition between two or more colors that radiate from an origin. Its shape may be a circle or an ellipse. The function's result is an object of the <gradient> data type, which is a special kind of <image>.
+
+    radial-gradient(shape size at position, start-color, ..., last-color);
+
+        shape: Determines the shape of the gradient follows when transitioning outward, from one color to the next. Since we’re talking about radial gradients, the shapes are limited to being circular in nature. 
+
+        size: Influences the ending shape of the gradient by taking the shape value and instructing where the gradient should end based on the center of the shape. This can be expressed by name or an exact measure of length.
+            closest-side: The gradient will end at side closest to the center of the shape. If two sides match this criteria, then it will be evenly distributed.
+            farthest-side (default): The opposite of closest-side, where the gradient will end at the side furthest from the shape’s center.
+            closest-corner: The gradient will end at the corner that matches as the closest to the shape’s center.
+            farthest-cornerThe opposite of closest-corner, where the gradient ends at the corner that is located furthest from the shape’s center.
+            : We can specify a numeric value that serves as the circle’s radius. This has to be stated in positive pixels or relative units.
+            percentage: A second numeric value can be provided to declare the explicit size of an ellipse, but not a circle. 
+
+        position: This works very much the same way that it does on background-position. That means top, right, left, and center all work here, as well as combinations where two named values (e.g. top center) are provided.
+
+        color-stop: These are color values that define the gradient. Any color value is accepted here, including hex, named, RGB and HSL.
+
+        radial-gradient(at bottom right, rgba(0,0,255, 0.8), rgba(0,0,255,0) 60%)
+
+    The conic-gradient() CSS function creates an image consisting of a gradient with color transitions rotated around a center point (rather than radiating from the center). Example conic gradients include pie charts and color wheels. The result of the conic-gradient() function is an object of the <gradient> data type, which is a special kind of <image>.
+    background: conic-gradient( 
+        red 6deg, orange 6deg 18deg, yellow 18deg 45deg, 
+        green 45deg 110deg, blue 110deg 200deg, purple 200deg);
+
+    The repeating-linear-gradient() CSS function creates an image consisting of repeating linear gradients. It is similar to linear-gradient() and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container. The function's result is an object of the <gradient> data type, which is a special kind of <image>.
+    background: repeating-linear-gradient(#e66465, #e66465 20px, #9198e5 20px, #9198e5 25px);
+
+    The repeating-radial-gradient() CSS function creates an image consisting of repeating gradients that radiate from an origin. It is similar to radial-gradient() and takes the same arguments, but it repeats the color stops infinitely in all directions so as to cover its entire container, similar to repeating-linear-gradient() . The function's result is an object of the <gradient> data type, which is a special kind of <image>.
+    background: repeating-radial-gradient(#e66465, #9198e5 20%);
+
+    .\CSS\gradients.html
+
+how to make the text as the background color or image?
+    background-clip: text;
+    text-fill-color: transparent;
+
+    .\CSS\text-color-bg.html
+
+z-index?
+    The z-index CSS property sets the z-order of a positioned element and its descendants or flex items. Overlapping elements with a larger z-index cover those with a smaller one.
+    The z-index property is specified as either the keyword auto or an <integer>.
+    Using z-index, the rendering order of certain elements is influenced by their z-index value. This occurs because these elements have special properties which cause them to form a stacking context.    
+    A stacking context is formed, anywhere in the document, by any 
+    element in the following scenarios:
+    Element with a position value absolute or relative and z-index value other than auto.
+    Element with a position value fixed or sticky (sticky for all mobile browsers, but not older desktop).
+    Element that is a child of a flex (flexbox) container, with z-index value other than auto.
+
+    .\CSS\index-z.html
+
+Visibility, Opacity and Display?
+    These properties hidde elements from user interface view.
+        opacity 0: occupies space, consume click events.
+        visibility hidden: occupies space, doesn't consume click events.
+        Display none: doesn't occupies space, doesn't consume click events.
+
+appearance?
+    The appearance CSS property is used to display an element using platform-native styling, based on the operating system's theme. 
+    The appearance property is used for one of two reasons:
+        To apply platform specific styling to an element that doesn’t have it by default
+        To remove platform specific styling to an element that does have it by default
+
+    appearance: none | auto | initial | inherit | icon | window | button | menu | field | desktop | workspace | document | tooltip | dialogue | push-button | hyperlink | radio-button | checkbox | menu-item | tab | menubar | outline-tree | range | signature | password;
+
+Responsive Design and Media Queries?
+    Responsive web design is the practice of building a website suitable to work on every device and every screen size.
+    Responsive design is accomplished through CSS “media queries”. 
+    Think of media queries as a way to conditionally apply CSS rules. They tell the browser that it should ignore or apply certain rules depending on the user’s device. 
+
+    The width feature is specified as a <length> value representing the viewport width. It is a range feature, meaning that you can also use the prefixed min-width and max-width variants to query minimum and maximum values, respectively.
+    @media only screen and (max-width: 600px)
+
+    The height feature is specified as a <length> value representing the viewport height. It is a range feature, meaning that you can also use the prefixed min-height and max-height variants to query minimum and maximum values, respectively.
+
+    The aspect-ratio feature is specified as a <ratio> value representing the width-to-height aspect ratio of the viewport. It is a range feature, meaning you can also use the prefixed min-aspect-ratio and max-aspect-ratio variants to query minimum and maximum values, respectively.
+    @media only screen and (max-aspect-ratio: 2/1)
+
+    The resolution feature is specified as a <resolution> value representing the pixel density of the output device. It is a range feature, meaning that you can also use the prefixed min-resolution and max-resolution variants to query minimum and maximum values, respectively.
+
+    The orientation feature is specified as a keyword value chosen from the list below.
+    portrait: The viewport is in a portrait orientation.
+    landscape: The viewport is in a landscape orientation.
+        2/1 while the width is the double of the height
+        1/2 while the width is half the height
+        max apply style while value is less than ratio
+        min apply style while value is greater than ratio
+
+
+    The "only" operator is used to apply a style only if an entire query matches, and is useful for preventing older browsers from applying selected styles. The "only" keyword tells a browser to ignore a stylesheet if it doesn't know what a media query is. The only keyword prevents older browsers that do not support media queries with media features from applying the specified styles. It has no effect on modern browsers.
+
+    "and" The and operator is used for combining multiple media features together into a single media query, requiring each chained feature to return true in order for the query to be true. The and keyword combines a media feature with a media type or other media features.
+
+    "not" The not operator is used to negate a media query, returning true if the query would otherwise return false. The not keyword reverts the meaning of an entire media query.
+
+    "," (comma) Commas are used to combine multiple media queries into a single rule. 
+
+    Media types describe the general category of a device. Except when using the not or only logical operators, the media type is optional and the all type will be implied.
+    all: Suitable for all devices.
+    screen: Intended primarily for screens.
+    speech: Intended for speech synthesizers.
+    print: Intended for paged material and documents viewed on a screen in print preview mode.
+
+    .\CSS\mediaqueries.html
+
+will-change?
+    The will-change CSS property hints to browsers how an element is expected to change. Browsers may set up optimizations before an element is actually changed. These kinds of optimizations can increase the responsiveness of a page by doing potentially expensive work before they are actually required. The will-change is intended to be used as a last resort, in order to try to deal with existing performance problems. It should not be used to anticipate performance problems.
+
+    This property has four values:
+        auto: standard browser optimizations will be applied.
+        scroll-position: indicates that the element’s scroll position will be animated sometime in the near future so the browser will prepare for content which is not visible in the scroll window of an element.
+        contents: the contents of an element is expected to change so the browser will not cache this element’s content.
+        <custom-ident>: any user-defined property such as transform or opacity that we want will-change to be applied to.
+
+text and fonts?
+    In CSS, there are two types of font family names:
+        generic family - a group of font families with a similar look (like "Serif" or "Monospace")
+        font family - a specific font family (like "Times New Roman" or "Arial")
+
+        Serif: Serif fonts have small lines at the ends on some characters. (Timnes New Roman).
+        Sans-serif: "Sans" means without - these fonts do not have the lines at the ends of characters. (Arial).
+        Monospace: All monospace characters have the same width. (Courier new).
+
+    The font-family CSS property specifies a prioritized list of one or more font family names and/or generic family names for the selected element. The property should hold several font names as a "fallback" system. If the browser does not support the first font, it tries the next font, and so on. Start with the font you want, and end with a generic family, to let the browser pick a similar font in the generic family, if no other fonts are available.
+
+    The font-size CSS property sets the size of the font. Changing the font size also updates the sizes of the font size-relative <length> units, such as em, ex, and so forth.
+
+        Setting the font size in pixel values (px) is a good choice when you need pixel accuracy. A px value is static. This is an OS-independent and cross-browser way of literally telling the browsers to render the letters at exactly the number of pixels in height that you specified.
+
+        When defining the font-size property, an em is equal to the font size of the element on which the em is used. If you haven't set the font size anywhere on the page, then it is the browser default, which is often 16px.
+
+        The rem values were invented in order to sidestep the compounding problem. rem values are relative to the root html element, not the parent element.
+
+    The font-weight CSS property sets the weight (or boldness) of the font. The weights available depend on the font-family that is currently set. Examples: nomral (400) and bold (700).
+
+    The line-height CSS property sets the height of a line box. It's commonly used to set the distance between lines of text. On block-level elements, it specifies the minimum height of line boxes within the element. On non-replaced inline elements, it specifies the height that is used to calculate line box height.
+    Depends on the user agent. Desktop browsers (including Firefox) use a default value of roughly 1.2, depending on the element's font-family.
+
+    The font-variant CSS shorthand property allows you to set all the font variants for a font. Mostly used for small caps.
+
+    letter-spacing: The letter-spacing CSS property sets the horizontal spacing behavior between text characters. This value is added to the natural spacing between characters while rendering the text. Positive values of letter-spacing causes characters to spread farther apart, while negative values of letter-spacing bring characters closer together.
+
+    white-space: The white-space CSS property sets how white space inside an element is handled.
+        normal: Sequences of white space are collapsed. Newline characters in the source are handled the same as other white space. Lines are broken as necessary to fill line boxes.
+        nowrap: Collapses white space as for normal, but suppresses line breaks (text wrapping) within the source.
+        pre: Sequences of white space are preserved. Lines are only broken at newline characters in the source and at <br> elements.
+        pre-wrap: Sequences of white space are preserved. Lines are broken at newline characters, at <br>, and as necessary to fill line boxes.
+
+    word-spacing: The word-spacing CSS property sets the length of space between words and between tags.
+
+    word-break: The word-break CSS property sets whether line breaks appear wherever the text would otherwise overflow its content box.
+        normal: Use the default line break rule.
+        break-all: To prevent overflow, word breaks should be inserted between any two characters (excluding Chinese/Japanese/Korean text).
+        keep-all: Word breaks should not be used for Chinese/Japanese/Korean (CJK) text. Non-CJK text behavior is the same as for normal.
+
+    hyphens: The hyphens CSS property specifies how words should be hyphenated when text wraps across multiple lines. It can prevent hyphenation entirely, hyphenate at manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.
+
+    text-justify: The text-justify CSS property sets what type of justification should be applied to text when text-align: justify; is set on an element. none|auto|inter-word|inter-character.
+
+    text-align: The text-align CSS property sets the horizontal alignment of a block element or table-cell box. This means it works like vertical-align but in the horizontal direction.
+    start|end|left|right|center|justify|justify-all;
+
+    text-transform: The text-transform CSS property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized.
+
+    text-decoration: The text-decoration shorthand CSS property sets the appearance of decorative lines on text. It is a shorthand for text-decoration-line, text-decoration-color, text-decoration-style, and the newer text-decoration-thickness property.
+        text-decoration-line: Sets the kind of decoration used, such as underline or line-through.
+        text-decoration-color: Sets the color of the decoration.
+        text-decoration-style: Sets the style of the line used for the decoration, such as solid, wavy, or dashed.
+        text-decoration-thickness: Sets the thickness of the line used for the decoration.
+
+    text-fill-color: CSS property specifies the fill color of characters of text. If this property is not set, the value of the color property is used.
+
+    The text-shadow CSS property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its decorations. Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color.
+
+        /* offset-x | offset-y | blur-radius | color */
+        text-shadow: 1px 1px 2px black; 
+
+        /* color | offset-x | offset-y | blur-radius */
+        text-shadow: #fc0 1px 0 10px; 
+
+        /* offset-x | offset-y | color */
+        text-shadow: 5px 5px #558abb;
+
+        /* color | offset-x | offset-y */
+        text-shadow: white 2px 5px;
+
+    .\CSS\fonts.html
+
+lists?
+    In HTML, there are two main types of lists:
+        unordered lists (<ul>) - the list items are marked with bullets.
+        ordered lists (<ol>) - the list items are marked with numbers or letters.
+
+    the <ul> and <ol> elements are the direct parents of the actual list items <li>.
+
+    The ::marker CSS pseudo-element selects the marker box of a list item, which typically contains a bullet or number. It works on any element or pseudo-element set to display: list-item, such as the <li> and <summary> elements.
+
+    The list-style CSS shorthand property allows you set all the list style properties at once.
+    The list-style-type CSS property sets the marker (such as a disc, character ("\1F44D"), or custom counter style) of a list item element.
+    The list-style-position CSS property sets the position of the ::marker relative to a list item.
+    The list-style-image CSS property sets an image to be used as the list item marker.
+
+    Thess properties are applied to list items, i.e., elements with display: list-item; . By default this includes <li> elements. Because this property is inherited, it can be set on a parent element (normally <ol> or <ul>) to make the same list styling apply to all the items inside. 
+
+    .\CSS\list.html
+
+
+Float and Clear?
+    The float CSS property specifies that an element should be placed along the left or right side of its container, 
+    allowing text and inline elements to wrap around it. The element is removed from the normal flow of the web page, though still remaining a part of the flow (in contrast to absolute positioning). 
+    left: The element must float on the left side of its containing block.
+    right: The element must float on the right side of its containing block.
+    none: The element must not float.
+    inline-start: The element must float on the start side of its containing block. That is the left side with ltr scripts, and the right side with rtl scripts.
+    inline-end: The element must float on the end side of its containing block. That is the right side with ltr scripts, and the left side with rtl scripts.
+
+    You can clear a float element using the clear CSS property that specifies whether an element can be next to floating elements that precede it or must be moved down (cleared) below them.
+
+    The clear property specifies what elements can float beside the cleared element and on which side.
+    The clear property can have one of the following values:
+    none - Allows floating elements on both sides. This is default
+    left - No floating elements allowed on the left side
+    right- No floating elements allowed on the right side
+    both - No floating elements allowed on either the left or the right side
+    inherit - The element inherits the clear value of its parent
+    The most common way to use the clear property is after you have used a float property on an element.
+
+    When clearing floats, you should match the clear to the float: If an element is floated to the left, then you should clear to the left. Your floated element will continue to float, but the cleared element will appear below it on the web page.
+
+    While floats can still be used for layout, these days, we have much stronger tools for creating layout on web pages. Namely, Flexbox and Grid.
+
+    clearfix: 
+    Elements after a floating element will flow around it. Use the "clearfix" hack to fix the problem.
+    If an element is taller than the element containing it, and it is floated, it will overflow outside of its container.
+    Then we can add overflow: auto; to the containing element to fix this problem.
+    The overflow:auto clearfix works well as long as you are able to keep control of your margins and padding (else you might see scrollbars). 
+    modern clearfix hack however, is safer to use, and the following code is used for most webpages:
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    .\CSS\float.html
+
+Flexbox?
+    is a onedimensional layout mode in CSS3 that distributes space along a single column or row.
+    A flex container expands items to fill available free space, or shrinks them to prevent overflow.
+    When we add display: flex, we are really defining display: block flex. The outer display type of our flex container is block; it acts like a block level element in normal flow. 
+    The flex container acts like any other block on your page.
+    The inner display type is flex, so items directly inside our container will participate in flex layout.
+
+    Flex-direction: This establishes the main-axis, thus defining the direction
+        flex items are placed in the flex container.  
+            row (default): left to right in ltr; right to left in rt; 
+            row-reverse: right to left in ltr; left to right in rtl; 
+            column: same as row but top to bottom; 
+            column-reverse: same as row-reverse but bottom to top
+    
+    Flex-wrap: flex items will all try to fit onto one line. You can change that and allow the items to wrap. 
+        nowrap: (default): all flex items will be on one line; 
+        wrap: flex items will wrap onto multiple lines, from top to bottom. 
+        Wrap-reverse: flex items will wrap onto multiple lines from bottom to top.
+
+    Justify-content: This defines the alignment along the main axis. 
+        Flex-start (default): items are packed toward the start line; 
+        flex-end: items are packed toward the end line; 
+        center: items are centered along the line; 
+        space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line; 
+        space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies; 
+        space-evenly: items are distributed so that the spacing between any two items (and the space to the edges) is equal.
+    
+    Align-items: This defines the default behavior for how flex items are laid out along the cross axis on the current line.
+        stretch(default): stretch to fill the container (still respect min-width/max-width).
+        flex-start: cross-start margin edge of the items is placed on the cross-start line
+        flex-end: cross-end margin edge of the items is placed on the cross-end line
+        center: items are centered in the cross-axis
+        baseline: items are aligned such as their baselines align
+
+
+    Align-content: This aligns a flex container's lines within when there is extra space in the cross-axis. this property has no effect when there is only one line of flex items. 
+        spaces between main-axis (rows or columns).
+        flex-start: lines packed to the start of the container
+        flex-end: lines packed to the end of the container
+        center: lines packed to the center of the container
+        space-between: lines evenly distributed; the first line is at the start of the container while the last one is at the end
+        space-around: lines evenly distributed with equal space around each line
+        stretch (default): lines stretch to take up the remaining space
+
+    Order:  flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container. 
+
+    Flex-grow: This defines the ability for a flex item to grow if necessary. It accepts a unit less value that serves as a proportion. It dictates what amount of the available space 		inside the flex container the item should take up. 
+
+    Flex-shrink: This defines the ability for a flex item to shrink if necessary. 
+
+    Flex-basis: property specifies the initial length of a flexible item. before any available space is distributed according to the flex factors. Does not work with absolute positioned items.
+
+    Align-self: This allows the default alignment (or the one specified by align-items) to be overridden for individual flex items. 
+
+    flex shortcut:
+    flex: flex-grow flex-shrink flex-basis. (default): 0 1 auto
+    flex: 0 1 auto   -> Items size is always the same as its content or width property.
+    flex: 1 0 auto   -> Items width is the available space and min-width is the items content.
+    flex: 1 0 200px  -> Items width is the available space and min-width is the flex-basis.
+    flex: 0 1 200px  -> Items dont grow, the "width" is the flex-basis and the items shrink (until contents size).
+    flex: 1 1 200px  -> Ignores the flex-basis and the items shrink (until its content size) and grow taking available space (default size).
+    flex: 1 1 auto -> Ignores the flex-basis and the items shrink (until its content size) and grow taking available space (default size).
+
+    .\CSS\flexbox.html
+    .\CSS\flexbox2.html
+
+Grid?
+    is a two-dimensional layout mode that divides space into columns & rows.
+
+    Grid Container
+    The element on which display: grid is applied. It's the direct parent of all the grid items. In this example container is the grid container.
+
+    Grid item
+    The children (i.e. direct descendants) of the grid container. Here the item elements are grid items
+
+    Grid lines
+    The dividing lines that make up the structure of the grid. They can be either vertical ("column grid lines") or horizontal ("row grid lines") and reside on either side of a row or column. 
+
+    Grid Track
+    The space between two adjacent grid lines. You can think of them like the columns or rows of the grid.
+
+    Grid Cell
+    The space between two adjacent row and two adjacent column grid lines. It's a single "unit" of the grid. 
+
+    Grid Area
+    The total space surrounded by four grid lines. A grid area may be comprised of any number of grid cells. 
+
+    grid-column / grid-row
+        defines the position between the grid lines for a grid item.
+        grid-column: span 2;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: span 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+
+    Grid-gap
+    Specifies the size of the grid lines. You can think of it like setting the width of the gutters between the columns/rows.
+    grid-gap: 20px;
+    grid-gap-row grid-gap-column = grid-gap: 20px 10px;
+
+    Grid template
+    Defines the columns and rows of the grid with a space-separated list of values. The values represent the track size, and the space between them represents the grid line.
+    grid-template-rows: 1fr 2fr 4fr 1fr;
+    grid-template-columns: repeat(3, 1fr) 2fr;
+
+    The fr unit works only with the free space in the container.
+    grid-template-columns: repeat(12, 1fr); The free space in the container is distributed equally among 12 columns. Since the columns are only dealing with free space, grid-column-gap is not a factor. It was subtracted from the container width before the fr length was determined. 
+    Here's how the browser does the calculation:
+    (free space - gutters) / 12  = 1fr
+
+    The % when you're using percentages 
+    grid-template-columns: repeat(12, calc(100% / 12)); the container is divided into 12 columns, each having a width of 8.33333%. This is an actual length, unlike the fr unit, which only deals with free space. Both the column lengths and grid gaps are factored into the width.
+    Here's how the browser does the calculation:
+    8.33333% * 12 = 100%
+         +
+    11 * 10px     = 110px
+    There's a clear overflow. Note: grid-*-gap properties apply only between grid items – never between items and the container. That's why the number of grid-gaps is 11, not 13.)
+    This works:
+    grid-template-columns: repeat(12, calc(8.3333% - 9.1667px));
+
+    grid-template-areas: 
+    Defines a grid template by referencing the names of the grid areas which are specified with the grid-area property. Repeating the name of a grid area causes the content to span those cells. A period signifies an empty cell. The syntax itself provides a visualization of the structure of the grid.
+        grid-template-areas: 
+            "head head head head"
+            "box1 box2 box3 side"
+            "main main main side"
+            "foot foot foot foot";
+
+    grid-area:
+    Gives an item a name so that it can be referenced by a template created with the grid-template-areas property. 
+    grid-area: head;
+
+    .\CSS\grid.html
+
+Transitions?
+    CSS transitions allows you to change property values smoothly (from one value to another), over a given duration. CSS transitions provide a way to control animation speed when changing CSS properties. Instead of having property changes take effect immediately, you can cause the changes in a property to take place over a period of time. 
+
+    To create a transition effect, you must specify two things:
+        the CSS property you want to add an effect to
+        the duration of the effect
+
+    transition: width 2s, height 2s, transform 2s;
+
+    .\CSS\transitions.html
+
+Animations === @keyframes?
+    An animation lets an element gradually change from one style to another.
+    CSS animations make it possible to animate transform properties through transitions from one CSS style configuration to another. 
+    Animations consist of two components, a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation’s style, as well as possible intermediate waypoints.
+
+    Keyframes: block contains sets of rules. A keyframe defines the style that will be applied for that moment within the animation. The animation engine will smoothly interpolate style between the keyframes. 
+
+    Name of the animation: A name that describes the animation, for example, bounceIn.
+    Stages of the animation: Each stage of the animation is represented as a percentage. 0% represents the beginning state of the animation. 100% represents the ending state of the animation. Multiple intermediate states can be added in between.
+    CSS Properties: The CSS properties defined for each stage of the animation timeline.
+
+    Animations that involve transitioning between two states are often called implicit transitions as the states in between the start and final states are implicitly defined by the browser.
+
+    animation-name
+    animation-duration
+    animation-delay
+    animation-iteration-count
+    animation-direction
+    animation-timing-function
+    animation-fill-mode
+
+    animation shortcut:
+    animation: item4 4s forwards ease-out;
+
+    @keyframes animation1 {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: rotateY(180deg);
+        }
+        100% {
+            transform: scale(0.7);
+        }
+    }
+
+    The animation-name CSS property specifies the names of one or more @keyframes at-rules describing the animation or animations to apply to the element.
+
+    The animation-duration CSS property sets the length of time that an animation takes to complete one cycle. Receive numbre representin seconds (s) or miliseconds (ms).
+
+    animation-delay property specifies a delay for the start of an animation. Negative values are also allowed. If using negative values, the animation will start as if it had already been playing for N seconds
+
+    The animation-iteration-count property specifies the number of times an animation should run. receives a number animation cycles or infinite repeat forever.
+
+    The animation-direction property specifies whether an animation should be played forwards, backwards or in alternate cycles. The property can have the following values:
+        normal - The animation is played as normal (forwards). This is default
+        reverse - The animation is played in reverse direction (backwards)
+        alternate - The animation is played forwards first, then backwards
+        alternate-reverse - The animation is played backwards first, then forwards
+
+    The animation-timing-function property specifies the speed curve of the animation. The property can have the following values:
+        ease - Specifies an animation with a slow start, then fast, then end slowly (this is default)
+        linear - Specifies an animation with the same speed from start to end
+        ease-in - Specifies an animation with a slow start
+        ease-out - Specifies an animation with a slow end
+        ease-in-out - Specifies an animation with a slow start and end
+        cubic-bezier(n,n,n,n) - Lets you define your own values in a cubic-bezier function
+
+    The animation-fill-mode property specifies a style for the target element when the animation is not playing (before it starts, after it ends, or both).
+    CSS animations do not affect an element before the first keyframe is played or after the last keyframe is played. The animation-fill-mode property can override this behavior.
+    The animation-fill-mode property can have the following values:
+        none - Default value. Animation will not apply any styles to the element before or after it is executing
+        forwards - The element will retain the style values that is set by the last keyframe (depends on animation-direction and animation-iteration-count)
+        backwards - The element will get the style values that is set by the first keyframe (depends on animation-direction), and retain this during the animation-delay period
+        both - The animation will follow the rules for both forwards and backwards, extending the animation properties in both directions.
+
+    The animation-play-state CSS property sets whether an animation is running or paused
+        running: The animation is currently playing.
+        paused: The animation is currently paused.
+
+    .\CSS\keyframes.html
+
+transform property?
+    The transform CSS property lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model.
+    If the property has a value different than none, a stacking context will be created. In that case, the element will act as a containing block for any position: fixed; or position: absolute; elements that it contains.
+    In CSS The Visual Formatting Model describes how user agents take the document tree, and process and display it for visual media.
+
+    scale(): Affects the size of the element. This also applies to the font-size, padding, height, and width of an element, too. It’s also a a shorthand function for the scaleX and scaleY functions.
+    skewX() and skewY(): Tilts an element to the left or right, like turning a rectangle into a parallelogram. skew() is a shorthand that combines skewX() and skewY() by accepting both values.
+    translate(): Moves an element sideways or up and down. You can also use the translayeX() and translayeY() functions.
+    rotate(): Rotates the element clockwise from its current position. You can also use the rotateX(), rotateY() and rotateZ() functions.
+    matrix(): A function that is probably not intended to be written by hand, but combines all transforms into one.         
+        transform: matrix(0.707, -0.707, 0.707, 0.707, 200, 0);
+        /* transform: translate(200px, 0px) rotate(45deg); */
+        /* matrix(scaleX, skewX, slewY, scaleY, transateX, translateY) */
+        /* cos(deg), -sin(deg), sin(deg), cos(deg) */
+    perspective(): Doesn’t affect the element itself, but affects the transforms of descendent elements’ 3D transforms, allowing them all to have a consistent depth perspective.
+
+    The perspective CSS property determines the distance between the z=0 plane and the user in order to give a 3D-positioned element some perspective. A <length> giving the distance from the user to the z=0 plane. It is used to apply a perspective transform to the element and its content. If the value is 0 or a negative number, no perspective transform is applied. Using this property with a value different than 0 and none creates a new stacking context. Also, in that case, the object will act as a containing block for position: fixed elements that it contains.
+
+    The perspective-origin CSS property determines the position at which the viewer is looking. It is used as the vanishing point by the perspective property.
+    The perspective-origin and perspective properties are attached to the parent of a child transformed in 3-dimensional space, unlike the perspective() transform function which is placed on the element being transformed.
+
+    The backface-visibility CSS property sets whether the back face of an element is visible when turned towards the user.
+
+    The transform-origin CSS property sets the origin for an element's transformations. The transformation origin is the point around which a transformation is applied. For example, the transformation origin of the rotate() function is the center of rotation. The value must be a <length>, a <percentage>, or one of the keywords left, center, right, top, and bottom.
+
+    .\CSS\transitions.html
+    .\CSS\keyframes.html
+    .\CSS\transform.html
+    .\CSS\transform2.html
+
+clip path?
+    Clips are always vector paths. Outside the path is transparent, inside the path is opaque.
+    Clipping refers to removing parts of elements defined by other parts. In this case, any half-transparent effects are not possible, it's an all-or-nothing approach.
+    Clipping describes the visible region of visual elements. The region can be described by using certain SVG graphics elements or basic shapes. Anything outside of this region is not rendered.
+
+    The clip-path CSS property creates a clipping region that sets what part of an element should be shown. Parts that are inside the region are shown, while those outside are hidden.
+    Basically allows you to specify a specific region of an element to display, rather than showing the complete area.
+    The clip-path property allows you to make complex shapes in CSS by clipping an element to a basic shape (circle, ellipse, polygon, or inset), or to an SVG source.
+    CSS Animations and transitions are possible with two or more clip-path shapes with the same number of points.
+
+    <clip-source> A <url> referencing an SVG <clipPath> element.
+    <basic-shape> A shape whose size and position is defined by the <geometry-box> value. If no geometry box is specified, the border-box will be used as the reference box.
+    <geometry-box> If specified in combination with a <basic-shape>, this value defines the reference box for the basic shape. If specified by itself, it causes the edges of the specified box, including any corner shaping (such as a border-radius), to be the clipping path. The geometry box can be one of the following values:
+        margin-box Uses the margin box as the reference box.
+        border-box Uses the border box as the reference box.
+        padding-box Uses the padding box as the reference box.
+        content-box Uses the content box as the reference box.
+        fill-box Uses the object bounding box as the reference box.
+        stroke-box Uses the stroke bounding box as the reference box.
+        view-box Uses the nearest SVG viewport as the reference box. If a viewBox attribute is specified for the element creating the SVG viewport, the reference box is positioned at the origin of the coordinate system established by the viewBox attribute and the dimension of the size of the reference box is set to the width and height values of the viewBox attribute.s
+
+    /* <clip-source> values */ 
+    clip-path: url(resources.svg#c1);
+
+    /* <geometry-box> values */
+    clip-path: margin-box;
+    clip-path: border-box;
+    clip-path: padding-box;
+    clip-path: content-box;
+    clip-path: fill-box;
+    clip-path: stroke-box;
+    clip-path: view-box;
+
+    * <basic-shape> values */
+    clip-path: inset(100px 50px);
+    clip-path: circle(50px at 0 100px);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: path('M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z');
+
+    /* Box and shape values combined */
+    clip-path: padding-box circle(50px at 0 100px);
+
+    .\CSS\transitions.html
+
+masking?
+    Mask are images. 
+    The mask is an off-screen image which has been initialized to transparent black. The graphical object to which the mask is applied will be painted onto the background through the mask, thus completely or partially masking out parts of the graphical object.
+    Imagine a square image that is a left-to-right, black-to-white gradient. That can be a mask. The element it is applied to will be transparent (see-through) where there is black in our gradient mask image, and opaque (normal) where there is white. So the final result will be an element that fades in from left to right.
+    Masking on the other hand allows soft edges by taking transparency and grey values of the mask into account.
+    Masking describes how to use another graphical element or image as a luminance or alpha mask. Typically, rendering an element via CSS or SVG can conceptually described as if the element, including its children, are drawn into a buffer and then that buffer is composited into the element's parent. Luminance and alpha masks influence the transparency of this buffer before the compositing stage.
+
+    The mask CSS shorthand property hides an element (partially or fully) by masking or clipping the image at specific points.
+
+    The mask-repeat CSS property sets how mask images are repeated. A mask image can be repeated along the horizontal axis, the vertical axis, both axes, or not repeated at all.
+
+    The mask-size CSS property specifies the sizes of the mask images. The size of the image can be fully or partially constrained in order to preserve its intrinsic ratio.
+
+    The mask-position CSS property sets the initial position, relative to the mask position layer set by mask-origin, for each defined mask image.
+
+    The mask-origin CSS property sets the origin of a mask.
+
+    The mask-composite CSS property represents a compositing operation used on the current mask layer with the mask layers below it.
+
+    The mask-image CSS property sets the image that is used as mask layer for an element.
+
+    .\CSS\masking.html
+    .\CSS\masking2.html
+
+background?
+    The background shorthand CSS property sets all background style properties at once, such as color, image, origin and size, or repeat method.
+
+    background-color: The background-color property sets the background color of an element.
+    background-image: The background-image property sets one or more background images for an element. "url(img_tree.gif)"
+    background-position: The background-position property sets the starting position of a background image. center|top bottom|x% y%|xpos ypos;
+    background-size: The background-size property specifies the size of the background images.  auto|length|cover|contain;
+    background-repeat: The background-repeat property sets if/how a background image will be repeated. repeat|repeat-x|repeat-y|no-repeat;
+    background-attachment: The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed. scroll|fixed|local
+    background-origin: The background-origin property specifies the origin position (the background positioning area) of a background image. padding-box|border-box|content-box;
+    background-clip: The background-clip property defines how far the background (color or image) should extend within an element. border-box|padding-box|content-box|initial|inherit;
+
+    .\CSS\background.html
+
+background blend modes?  
+    Blend modes (or Mixing modes) in digital image editing and computer graphics are used to determine how two layers are blended into each other. The default blend mode in most applications is simply to hide the lower layer by covering it with whatever is present in the top layer.
+    The property defines how an element’s background-image should blend with its background-color.
+
+    background-blend-mode, for blending an element’s background images, gradients, and background colors
+    mix-blend-mode, for blending elements over other elements, and lastly
+    isolation, a lesser used property used with mix-blend-mode for keeping elements from mixing together.
+
+    background-blend-mode properties:
+        normal: the background-color will not bleed through the background-image.
+        multiply: the background-image and background-color are multiplied and typically this leads to a darker image than before.
+        screen: both image and color is inverted, multiplied and then inverted again.
+        overlay: the background-color is mixed with the background-image to reflect the lightness or darkness of the backdrop.
+        darken: if the background-image is darker than the background-color then the image is replaced, otherwise it is left as it was.
+        lighten: if the background-image is lighter than the background-color then the image is replaced, otherwise it is left as it was.
+        color-dodge: the background-color is divided by the inverse of the background-image. This is very similar to the screen blend mode.
+        hard-light: if the background-image is lighter than the background-color then the result is muliply or if it is lighter then the result is screen.
+        soft-light: the final result is similar to hard-light but softer in that it looks like a diffused spotlight has been placed on the image.
+        difference: the result by subtracting the darker color of the background-image and the background-color from the lightest one. Often the image will have a very high contrast.
+
+    .\CSS\masking.html
+
+filter?
+    The filter CSS property applies graphical effects like blur or color shift to an element. Filters are commonly used to adjust the rendering of images, backgrounds, and borders.
+    The filter property is specified as none or one or more of the functions listed below. If the parameter for any function is invalid, the function returns none.
+    When a single filter property has two or more functions it's results will be different from when two or more filter properties are separately applied with the same functions.
+    You may combine any number of functions to manipulate the rendering.
+    Included in the CSS standard are several functions that achieve predefined effects. You can also reference an SVG filter with a URL to an SVG filter element.
+
+    The blur() fucntion applies a Gaussian blur to the input image. The value of radius defines the value of the standard deviation to the Gaussian function, or how many pixels on the screen blend into each other, so a larger value will create more blur. 
+
+    The brightness() function applies a linear multiplier to the input image, making it appear more or less bright. A value of 0% will create an image that is completely black. A value of 100% leaves the input unchanged. 
+
+    The contrast() function adjusts the contrast of the input image. A value of 0% will create an image that is completely gray. A value of 100% leaves the input unchanged.
+
+    The grayscale() function converts the input image to grayscale. The value of amount defines the proportion of the conversion. A value of 100% is completely grayscale. A value of 0% leaves the input unchanged.The grayscale() function converts the input image to grayscale. The value of amount defines the proportion of the conversion. A value of 100% is completely grayscale. A value of 0% leaves the input unchanged.
+
+    The hue-rotate() function applies a hue rotation on the input image. The value of angle defines the number of degrees around the color circle the input samples will be adjusted. A value of 0deg leaves the input unchanged.
+
+    The invert() function inverts the samples in the input image. The value of amount defines the proportion of the conversion. A value of 100% is completely inverted. A value of 0% leaves the input unchanged.
+
+    The opacity() function applies transparency to the samples in the input image. The value of amount defines the proportion of the conversion. A value of 0% is completely transparent. A value of 100% leaves the input unchanged.
+
+    The saturate() function saturates the input image. The value of amount defines the proportion of the conversion. A value of 0% is completely un-saturated. A value of 100% leaves the input unchanged.
+
+    The sepia() function converts the input image to sepia. The value of amount defines the proportion of the conversion. A value of 100% is completely sepia. A value of 0% leaves the input unchanged.
+
+    The url() Takes an URI pointing to an SVG filter, which may be embedded in an external XML file.
+
+    The drop-shadow() function applies a drop shadow effect to the input image. A drop shadow is effectively a blurred, offset version of the input image's alpha mask drawn in a particular color, composited below the image. This filter is similar to the box-shadow property. Drop-shadow also mimics the intended objects outline naturally unlike box-shadow that treats only the box as its path. Possible values: drop-shadow(8px 8px 10px red);
+
+        h-shadow - Required. Specifies a pixel value for the horizontal shadow. Negative values place the shadow to the left of the image.
+
+        v-shadow - Required. Specifies a pixel value for the vertical shadow. Negative values place the shadow above the image.
+
+        blur - Optional. This is the third value, and must be in pixels. Adds a blur effect to the shadow. A larger value will create more blur (the shadow becomes bigger and lighter). Negative values are not allowed. If no value is specified, 0 is used (the shadow's edge is sharp).
+
+        spread - Optional. This is the fourth value, and must be in pixels. Positive values will cause the shadow to expand and grow bigger, and negative values will cause the shadow to shrink. If not specified, it will be 0 (the shadow will be the same size as the element).
+
+        color - Optional. Adds a color to the shadow. If not specified, the color depends on the browser (often black).
+
+    CSS\gradients.html
+
+
+SVG?
+    SVG is an image format for vector graphics. It literally means Scalable Vector Graphics. Basically, what you work with in Adobe Illustrator.
+
+    Why use SVG at all?
+        Small file sizes that compress well
+        Scales to any size without losing clarity (except very tiny)
+        Looks great on retina displays
+        Design control like interactivity and filters
+
+    Advantages of using SVG over other image formats (like JPEG and GIF) are:
+        SVG images can be created and edited with any text editor
+        SVG images can be searched, indexed, scripted, and compressed
+        SVG images are scalable
+        SVG images can be printed with high quality at any resolution
+        SVG images are zoomable
+        SVG graphics do NOT lose any quality if they are zoomed or resized
+        SVG is an open standard
+        SVG files are pure XML
+
+    If I save the SVG to a file, I can use it directly in an <img> tag. You can change the size of it though just by selecting the img and changing its width or height. Similarly easy to using SVG as an img, you can use it in CSS as a background-image.
+
+    HTML provides elements for defining headers, paragraphs, tables, and so on. In much the same way SVG provides elements for circles, rectangles, and simple and complex curves. A simple SVG document consists of nothing more than the <svg> root element and several basic shapes that build a graphic together. In addition there is the <g> element, which is used to group several basic shapes together.
+
+    SVG Shapes:
+        Rectangle <rect>: element is used to create a rectangle and variations of a rectangle shape. <rect x="50" y="20" rx="20" ry="20" width="300" height="100"/>
+        Circle <circle>: element is used to create a circle. <circle cx="50" cy="50" r="40" />
+        Ellipse <ellipse>: element is used to create an ellipse. <ellipse cx="200" cy="80" rx="100" ry="50" />
+        Line <line>: element is used to create a line. <line x1="0" y1="0" x2="200" y2="200" />
+        Polyline <polyline>: element is used to create any shape that consists of only straight lines. <polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" />
+        Polygon <polygon>: element is used to create a graphic that contains at least three sides.  <polygon points="200,10 250,190 160,210" />
+        Path <path>: element is used to define a path.
+
+            The following commands are available for path data:
+                M = moveto
+                L = lineto
+                H = horizontal lineto
+                V = vertical lineto
+                C = curveto
+                S = smooth curveto
+                Q = quadratic Bézier curve
+                T = smooth quadratic Bézier curveto
+                A = elliptical Arc
+                Z = closepath
+
+            All of the commands also come in two variants. An uppercase letter specifies absolute coordinates on the page, and a lowercase letter specifies relative coordinates
+
+            M -> Moves the cursor. The first command is the "Move To" or M, which was described above. It takes two parameters, a coordinate (x) and coordinate (y) to move to. "M x y"
+            L -> The most generic is the "Line To" command, called with L. L takes two parameters—x and y coordinates—and draws a line from the current position to a new position. "L x y"
+            H. V -> There are two abbreviated forms for drawing horizontal and vertical lines. H draws a horizontal line, and V draws a vertical line. Both commands only take one parameter since they only move in one direction."H x" or "V y"
+            Z -> We can shorten the above path declaration a little bit by using the "Close Path" command, called with Z. This command draws a straight line from the current position back to the first point of the path. It is often placed at the end of a path node, although not always. Z
+            C -> The cubic curve, C, is the slightly more complex curve. Cubic Béziers take in two control points for each point. Therefore, to create a cubic Bézier, three sets of coordinates need to be specified. "C x1 y1, x2 y2, x y".
+            S -> Several Bézier curves can be stringed together to create extended, smooth shapes. Often, the control point on one side of a point will be a reflection of the control point used on the other side to keep the slope constant. In this case, a shortcut version of the cubic Bézier can be used, designated by the command "S x2 y2, x y"
+            Q -> The other type of Bézier curve, the quadratic curve called with Q, is actually a simpler curve than the cubic one. It requires one control point which determines the slope of the curve at both the start point and the end point. It takes two parameters: the control point and the end point of the curve.  "Q x1 y1, x y"
+            T -> As with the cubic Bézier curve, there is a shortcut for stringing together multiple quadratic Béziers, called with T. "T x y"
+            A -> The other type of curved line that can be created using SVG is the arc, called with the A command. Arcs are sections of circles or ellipses. For a given x-radius and y-radius, there are two ellipses that can connect any two points (as long as they're within the radius of the circle). Along either of those circles, there are two possible paths that can be taken to connect the points—so in any situation, there are four possible arcs available. "A rx ry x-axis-rotation large-arc-flag sweep-flag x y"
+
+        pathLength: The pathLength attribute lets authors specify a total length for the path, in user units. This value is then used to calibrate the browser's distance calculations with those of the author, by scaling all distance computations using the ratio pathLength/(computed value of path length). This can affect the actual rendered lengths of paths; including text paths, animation paths, and various stroke operations. Basically, all computations that require the length of the path. stroke-dasharray, for example, will assume the start of the path being 0 and the end point the value defined in the pathLength attribute.
+
+    Text <text>: element is used to define a text.  <text x="0" y="15">I love SVG!</text>
+
+    SVG Stroke Properties. SVG offers a wide range of stroke properties. In this chapter we will look at the following:
+        stroke: The stroke property defines the color of a line, text or outline of an element.
+        stroke-width: The stroke-width property defines the thickness of a line, text or outline of an element.
+        stroke-linecap: The stroke-linecap property defines different types of endings to an open path.
+        stroke-dasharray: The stroke-dasharray property is used to create dashed lines.
+        troke-dashoffset: attribute is a presentation attribute defining an offset on the rendering of the associated dash array.
+
+    fill: Using fill sets the color inside the object.
+
+    SVG Clipping and Masking:
+
+        Clipping refers to removing parts of elements defined by other parts. In this case, any half-transparent effects are not possible, it's an all-or-nothing approach.
+        The <clipPath> SVG element defines a clipping path, to be used by the clip-path property.
+        A clipping path restricts the region to which paint can be applied. Conceptually, parts of the drawing that lie outside of the region bounded by the clipping path are not drawn.
+
+        Masking on the other hand allows soft edges by taking transparency and grey values of the mask into account.
+        The mask attribute is a presentation attribute mainly used to bind a given <mask> element with the element the attribute belongs to.
+
+    .\CSS\svgs1.html
+    .\CSS\svgs2.html
+
+SVG Filters?
+
+    The <feGaussianBlur> SVG filter primitive blurs the input image by the amount specified in stdDeviation, which defines the bell-curve.
+
+        stdDeviation: The stdDeviation attribute defines the standard deviation for the blur operation.
+        If two numbers are provided, the first number represents a standard deviation value along the x-axis. The second value represents a standard deviation along the y-axis. If one number is provided, then that value is used for both X and Y.
+
+        result: The result attribute defines the assigned name for this filter primitive. If supplied, then graphics that result from processing this filter primitive can be referenced by an in attribute on a subsequent filter primitive within the same <filter> element. If no value is provided, the output will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its in attribute.
+        in: The in attribute identifies input for the given filter primitive. The value can be either one of the six keywords, or a string which matches a previous result attribute value within the same <filter> element. If no value is provided and this is the first filter primitive, then this filter primitive will use SourceGraphic as its input. If no value is provided and this is a subsequent filter primitive, then this filter primitive will use the result from the previous filter primitive as its input.
+
+                    SourceGraphic: This keyword represents the graphics elements that were the original input into the <filter> element.
+                    BackgroundImage: This keyword represents an image snapshot of the SVG document under the filter region at the time that the <filter> element was invoked.
+
+        in2: The in2 attribute identifies the second input for the given filter primitive. It works exactly like the in attribute. Three elements use this attribute: <feBlend>, <feComposite> and <feDisplacementMap>.
+
+    The <feColorMatrix> SVG filter element changes colors based on a transformation matrix. Every pixel's color value  [R,G,B,A] is matrix multiplied by a 5 by 5 color matrix to create new color [R',G',B',A']. The feColorMatrix is an SVG filter primitive that allows the manipulation of color values across color channels. It provides more powerful color manipulation flexibility than CSS shorthand filters. It is always a child element of an SVG filter element. Using feColorMatrix, you can change color saturation, perform hue rotations, selectively adjust alpha values of particular channels, adjust contrast, brightness and more.
+
+    The <feBlend> SVG filter primitive composes two objects together ruled by a certain blending mode. This is similar to what is known from image editing software when blending two layers. The mode is defined by the mode attribute.
+        mode: The mode attribute defines the blending mode on the <feBlend> filter primitive.
+
+    The <feOffset> SVG filter primitive allows to offset the input image. The input image as a whole is offset by the values specified in the dx and dy attributes.
+
+    The SVG <feDropShadow> filter primitive creates a drop shadow of the input image. It can only be used inside a <filter> element. The drop shadow color and opacity can be changed by using the flood-color and flood-opacity presentation attributes.
+        dx: This attribute defines the x offset of the drop shadow.
+        dy: This attribute defines the y offset of the drop shadow.
+        stdDeviation: This attribute defines the standard deviation for the blur operation in the drop shadow.
+
+    The <feDisplacementMap> SVG filter primitive uses the pixel values from the image from in2 to spatially displace the image from in.
+
+        Scale: The scale attribute defines the displacement scale factor to be used on a <feDisplacementMap> filter primitive. The amount is expressed in the coordinate system established by the primitiveUnits attribute on the <filter> element.
+        xChannelSelector: The xChannelSelector attribute indicates which color channel from in2 to use to displace the pixels in in along the x-axis. R | G | B | A
+        yChannelSelector: The yChannelSelector attribute indicates which color channel from in2 to use to displace the pixels in in along the y-axis. R | G | B | A
+
+    The <feTurbulence> SVG filter primitive creates an image using the Perlin turbulence function. It allows the synthesis of artificial textures like clouds or marble. The resulting image will fill the entire filter primitive subregion.
+
+        baseFrequency: The baseFrequency attribute represents the base frequency parameter for the noise function of the <feTurbulence> filter primitive.
+        numOctaves: The numOctaves attribute defines the number of octaves for the noise function of the <feTurbulence> primitive. An octave is a noise function defined by its frequency and amplitude. A turbulence is built by accumulating several octaves with increasing frequencies and decreasing amplitudes. The higher the number of octaves, the more natural the noise looks. Though more octaves also require more calculations, resulting in a negative impact on performance.
+        seed: The seed attribute represents the starting number for the pseudo random number generator of the <feTurbulence> filter primitive.
+
+    animate: The SVG <animate> element provides a way to animate an attribute of an element over time.
+
+        dur: The dur attribute indicates the simple duration of an animation. This value specifies the length of the simple duration. The value must be greater than 0 and can be expressed with hours (h), minutes (m), seconds (s) or milliseconds (ms).
+        repeatCount: The repeatCount attribute indicates the number of times an animation will take place.
+        begin: The begin attribute defines when an animation should begin or when an element should be discarded.
+        values: The values attribute has different meanings, depending upon the context where itʼs used, either it defines a sequence of values used over the course of an animation, or itʼs a list of numbers for a color matrix, which is interpreted differently depending on the type of color change to be performed.
+        keytimes: The keyTimes attribute represents a list of time values used to control the pacing of the animation. Each time in the list corresponds to a value in the values attribute list, and defines when the value is used in the animation. Each time value in the keyTimes list is specified as a floating point value between 0 and 1 (inclusive), representing a proportional offset into the duration of the animation element.
+        keyPoints: This attribute indicate, in the range [0,1], how far is the object along the path for each keyTimes associated values. Value type: <number>*; Default value: none;
+        path: This attribute defines the path of the motion, using the same syntax as the d attribute. Value type: <string>; Default value: none; 
+        rotate: This attribute defines a rotation applied to the elment animated along a path, usually to make it pointing in the direction of the animation.
+
+    animateTransform: The animateTransform element animates a transformation attribute on its target element, thereby allowing animations to control translation, scaling, rotation, and/or skewing.
+
+        attributeName: The attributeName attribute indicates the name of the CSS property or attribute of the target element that is going to be changed during an animation.
+        from: The from attribute indicates the initial value of the attribute that will be modified during the animation. When used with the to attribute, the animation will change the modified attribute from the from value to the to value. When used with the by attribute, the animation will change the attribute relatively from the from value by the value specified in by.
+        to: The to attribute indicates the final value of the attribute that will be modified during the animation. The value of the attribute will change between the from attribute value and this value.
+        by: The by attribute specifies a relative offset value for an attribute that will be modified during an animation.
+
+    The SVG <animateMotion> element let define how an element moves along a motion path. To reuse an existing path, it will be necessary to use an <mpath> element inside the <animateMotion> element instead of the path attribute.
+
+    The <mpath> sub-element for the <animateMotion> element provides the ability to reference an external <path> element as the definition of a motion path.
+
+    .\CSS\svgs1.html
+    .\CSS\svgs2.html
+    .\CSS\svg_filters1.html
+    .\CSS\svg_filters2.html
+    .\CSS\svg_motion.html
+

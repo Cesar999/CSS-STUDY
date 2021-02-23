@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        border: 2px solid blue;
+        margin-left: 200px;
+    }
+    .container > div {
+        border: 2px solid red;
+        white-space: nowrap;
+        padding: 10px;
+    }
+    .item1 {
+        flex: 0 1 auto;
+    }
+    .item2 {
+        flex: 1 0 auto;
+    }
+    .item3 {
+        flex: 1 0 200px;
+    }
+    .item4 {
+        flex: 0 1 200px;
+    }
+    .item5 {
+        flex: 1 1 200px;
+    }
+    .item6 {
+        flex: 1 1 auto;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item1">flex: 0 1 auto</div>
+    </div>
+    <div class="container">
+        <div class="item2">flex: 1 0 auto</div>
+    </div>
+    <div class="container">
+        <div class="item3">flex: 1 0 200px</div>
+    </div>
+    <div class="container">
+        <div class="item4">flex: 0 1 200px</div>
+    </div>
+    <div class="container">
+        <div class="item5">flex: 1 1 200px</div>
+    </div>
+    <div class="container">
+        <div class="item6">flex: 1 1 auto</div>
+    </div>
+</body>
+</html>
+
+<!-- flex: 0 1 auto   -> Items size is always the same as its content or width property.
+flex: 1 0 auto   -> Items width is the available space and min-width is the items content.
+flex: 1 0 200px  ->  Items width is the available space and min-width is the flex-basis.
+flex: 0 1 200px  -> Items dont grow, the "width" is the flex-basis and the items shrink (until contents size).
+flex: 1 1 200px  -> Ignores the flex-basis and the items shrink (until its content size) and grow taking available space (default size).
+flex: 1 1 auto -> Ignores the flex-basis and the items shrink (until its content size) and grow taking available space (default size). -->

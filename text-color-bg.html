@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        overflow: hidden;
+        background-color: black;
+    }
+    .container1, .container2 {
+        height: 40vh;
+        width: 100w;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        font-family: sans-serif;
+        font-weight: 800;
+    }
+    .container1 p {
+        background: linear-gradient(45deg, tomato, teal, #c90873);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .container2 p {
+        background: url("./rainbow.jpg");
+        background-size: cover;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+</style>
+<body>
+    <div class="container1">
+        <p>Some Random Text</p>
+    </div>
+
+    <div class="container2">
+        <p>Some Random Text</p>
+    </div>
+</body>
+</html>

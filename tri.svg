@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" id="triangle">
+    <path id="mypath1" d="M 200 10 L 390 390 L 10 390 Z" fill="cornflowerblue" stroke="tomato" stroke-width="40px"/>
+</svg>

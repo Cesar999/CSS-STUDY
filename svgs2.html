@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #mysvg1 {
+        width: 600px;
+    }
+    #mysvg1 .path1 {
+        fill: cornflowerblue;
+        stroke-width: 8px;
+        stroke: tomato;
+        stroke-linecap: square;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1230;
+        animation: dash1 3s linear alternate infinite;
+    }
+    #mysvg1 .path2 {
+        fill: none;
+        stroke-width: 4px;
+        stroke: darkblue;
+        stroke-linecap: butt;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1095;
+        animation: dash2 3s linear alternate infinite;
+    }
+    #mysvg1 .path3 {
+        fill: goldenrod;
+        stroke: none
+    }
+    #mysvg1 .path4 {
+        fill: none;
+        stroke-width: 8px;
+        stroke: red;
+        stroke-linecap: round;
+        stroke-dashoffset: 0;
+        stroke-dasharray: 540;
+        animation: dash4 3s linear alternate infinite;
+    }
+
+    @keyframes dash1 {
+        from {
+            stroke-dashoffset: 0;
+        }
+        to {
+            stroke-dashoffset: 1230;
+        }
+    }
+
+    @keyframes dash2 {
+        from {
+            stroke-dashoffset: 0;
+        }
+        to {
+            stroke-dashoffset: 1095;
+        }
+    }
+
+    @keyframes dash4 {
+        from {
+            stroke-dashoffset: 0;
+        }
+        to {
+            stroke-dashoffset: 540;
+        }
+    }
+</style>
+<body>
+    <svg viewBox="0 0 400 400" id="mysvg1">
+        <path class="path1" d="M 200 10 L 390 390 L 10 390 Z" />
+        <polyline class="path2" points="100 50, 50 100, 150 100, 100 150, 200 150, 150 200, 250 200, 200 250, 300 250, 250 300, 350 300, 300 350, 400 350, 350 400"/>
+        <polygon class="path3" points="50, 160 55, 180 70, 180 60, 190 65, 205 50, 195 35, 205 40, 190 30, 180 45, 180"/>
+        <path class="path4" d="M 10 200 Q 100 10 200 200 T 390 300" />
+    </svg>
+    <script>
+        const x = document.querySelector('.path1').getTotalLength();
+        console.log(x);
+    </script>
+</body>
+</html>

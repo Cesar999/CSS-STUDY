@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        width: 90vw;
+        flex-wrap: wrap;
+    }
+    ol, ul {
+        box-sizing: border-box;
+        width: 50%;
+        padding-inline-start: 50px;
+        background-color: teal;
+        /* list-style: square inside url("sqpurple.gif"); */
+    }
+    ol > li, ul > li {
+        border: 2px solid black;
+        /* list-style-type: none; */
+        background-color: rgb(47, 199, 199);
+        margin: 5px;
+    }
+    li {
+        list-style: none;
+    }
+    li:before {
+        content: '';
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        background-image: url('./tri.svg');
+    }
+    .ol1 {
+        list-style-type: circle;
+        list-style-position: inside;
+    }
+    .ol2 {
+        list-style-type: square;
+        list-style-position: outside;
+    }
+    .ul1 {
+        list-style-type: decimal;
+        list-style-position: inside;
+    }
+    .ul2 {
+        list-style-type: lower-alpha;
+        list-style-position: outside;
+    }
+</style>
+<body>
+    <div class="container">
+        <ol class="ol1">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <ol class="ol2">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <ul class="ul1">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <ul class="ul2">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+    </div>
+</body>
+</html>  

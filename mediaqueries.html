@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        width: 50vh;
+        height: 50vh;
+        background-color: rgb(61, 103, 219);
+    }
+    @media only screen and (max-width: 900px) {
+        .container {
+            background-color: red;
+        }
+    }
+    @media only screen and (max-width: 600px) {
+        .container {
+            background-color: green;
+        }
+    }
+    @media only screen and (max-aspect-ratio: 2/1) {
+        .container {
+            background-color: tomato;
+        }
+    }
+/* 
+    2/1 while the width is the double of the height
+    1/2 while the width is half the height
+    max apply style while value is less than ratio
+    min apply style while value is greater than ratio */
+
+</style>
+<body>
+    <div class="container">
+        <h1>Container</h1>
+    </div>
+</body>
+</html>

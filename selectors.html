@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+    body {
+        background-color: white;
+    }
+    table {
+        margin: 50px auto;
+        text-align: left;
+        border-collapse: collapse;
+        border: 2px solid teal;
+    }
+    table th {
+        background-color: teal;
+        color: white;
+        font-weight: 600;
+    }
+    table th, table td {
+        padding: 5px 10px;
+        border-right: 1px solid white;
+    }
+    table tr:nth-child(odd){
+        background-color: rgb(230, 230, 230);
+    }
+    table tr:nth-child(even){
+        background-color: white;
+    }
+
+    .container {
+        width: 984px;
+        border: 2px solid black;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px 0px;
+    }
+    .container p, .container div {
+        background-color: rgb(230, 230, 230);
+        padding: 5px;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .container div + p {
+        background-color: tomato;
+    }
+    .container div ~ p {
+        border: 8px solid teal;
+    }
+
+</style>
+<body>
+    <table>
+        <thead>
+            <th>Selector</th>
+            <th>Example</th>
+            <th>Description</th>
+            <th>Specificity </th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Class</td>
+                <td>.myClass</td>
+                <td>Selects all elements with the class myClass</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>#myID</td>
+                <td>Selects the element with the id myID</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>Element</td>
+                <td>div</td>
+                <td>Selects all the div elements</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Wild Card</td>
+                <td>div *</td>
+                <td>Selects all the elements inside a div</td>
+                <td>0</td>
+            </tr>
+            <tr>
+                <td>Descendant</td>
+                <td>div p</td>
+                <td>Selects all p elements inside a div elements</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Direct Child</td>
+                <td>div > p</td>
+                <td>Selects all p elements that are direct children of a div elements</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Adjacent Sibiling</td>
+                <td>div + p</td>
+                <td> Selects all p elements that are placed immediately after div elements</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>General Sibiling</td>
+                <td>div ~ p</td>
+                <td> Selects every p that is preceded by a div element</td>
+                <td>1</td>
+            </tr>
+
+            <tr>
+                <td>Attribute</td>
+                <td>[href="https"]</td>
+                <td> Selects all the elements with the property href</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Attribute Value Starts With</td>
+                <td>[href^="wwww"]</td>
+                <td> Selects all the elements that have the atribute href with a value that starts with www</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Attribute Value Ends With</td>
+                <td>[href$="pdf"]</td>
+                <td> Selects all elements that have the attribute href with a value that ends with pdf</td>
+                <td>10</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="container">
+        <p>P</p>
+        <p>P</p>
+        <div>DIV</div>
+        <p>P</p>
+        <p>P</p>
+        <div>DIV</div>
+        <p>P</p>
+        <p>P</p>
+    </div>
+</body>
+</html>

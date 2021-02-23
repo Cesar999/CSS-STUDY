@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .grid-container {
+        background-color: teal;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        width: 400px;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    .grid-item {
+        background-color: tomato;
+        height: 50px;
+    }
+
+    .item-5 {
+        grid-column: span 2;
+        /* grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2; */
+    }
+
+    .grid-container2 {
+        background-color: teal;
+        display: grid;
+        grid-template-areas: 
+        "head head head head"
+        "box1 box1 box1 box2"
+        "box3 box3 box3 box2"
+        "box4 box4 box4 box2";
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .item-6 {
+        grid-area: head;
+        background-color: turquoise;
+    }
+    .item-7 {
+        grid-area: box1;
+        background-color: violet;
+    }
+    .item-8 {
+        grid-area: box2;
+        background-color: yellowgreen;
+    }
+    .item-9 {
+        grid-area: box3;
+        background-color: darkviolet;
+    }
+    .item-10 {
+        grid-area: box4;
+    }
+
+</style>
+<body>
+    <div class="grid-container">
+        <div class="grid-item item-1">Item 1</div>
+        <div class="grid-item item-2">Item 2</div>
+        <div class="grid-item item-3">Item 3</div>
+        <div class="grid-item item-4">Item 4</div>
+        <div class="grid-item item-5">Item 5</div>
+    </div>
+    <hr>
+    <div class="grid-container2">
+        <div class="grid-item item-6">Item 6</div>
+        <div class="grid-item item-7">Item 7</div>
+        <div class="grid-item item-8">Item 8</div>
+        <div class="grid-item item-9">Item 9</div>
+        <div class="grid-item item-10">Item 10</div>
+    </div>
+</body>
+</html>

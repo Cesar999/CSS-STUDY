@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        border: 2px solid teal;
+        width: 70vw;
+        margin: 30px auto;
+    }
+    .container::after {
+        content: url('./tri.svg');
+        display: inline-block;
+        height: 100px;
+        width: 100px;
+    }
+    .item1 {
+        width: 70%;
+        margin: 30px auto;
+        border: 2px solid tomato;
+        padding: 30px;
+    }
+    .item1::first-line {
+        font-variant: small-caps;
+        color: darkgoldenrod;
+    }
+    .item2 {
+        width: 70%;
+        height: 100px;
+        margin: 30px auto;
+        background-color: cornflowerblue;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+    }
+    .item2::before {
+        content: "\2605 \2606";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        background-color: violet;
+        padding: 10px;
+        border-radius: 0% 0% 50%;
+        font-size: 1.4rem;
+        color: indigo;
+    }
+    .item2::after {
+        content: "\266A \2764";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        background-color: crimson;
+        padding: 10px;
+        border-radius: 50% 0% 0%;
+        font-size: 1.4rem;
+        color: gold;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="item1">
+            Sed non malesuada arcu. Suspendisse ligula urna, volutpat commodo mattis et, aliquam vitae nisi. 
+            Pellentesque ut odio ut mi tristique vehicula a eu orci.
+            Morbi nec consectetur dolor. Ut molestie est massa, condimentum viverra massa rutrum eget.
+            In in ex eu augue feugiat semper dignissim id ipsum. Mauris condimentum massa at velit pulvinar, at blandit libero congue.
+            Sed mollis faucibus leo, sed sodales ligula ultricies nec. Donec ut nulla laoreet, feugiat lectus sed, maximus enim.
+        </div>
+        <div class="item2">
+            Pellentesque molestie, ante ut mollis posuere, tortor massa porta mi, congue scelerisque nibh nisl eu ante. 
+            Nullam in mauris ultrices ipsum tristique condimentum. 
+            Ut vel scelerisque orci. 
+        </div>
+    </div>
+</body>
+</html>
