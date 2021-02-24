@@ -1,0 +1,17 @@
+.container .content .list .list-item:hover {
+  background-color: chocolate;
+  color: white; }
+
+.container .content .list .list-item:first-child {
+  margin-top: 15px;
+  background-color: silver; }
+  .container .content .list .list-item:first-child:hover {
+    background-color: chocolate;
+    color: silver; }
+
+.container .content .list .list-item:last-child {
+  margin-bottom: 15px;
+  background-color: goldenrod; }
+  .container .content .list .list-item:last-child:hover {
+    background-color: chocolate;
+    color: goldenrod; }

@@ -1,0 +1,19 @@
+.header {
+    background-color: tomato;
+    color: white;
+    font: {
+        weight: bold;
+        size: 24px
+    }
+    text-transform: capitalize;
+}
+
+.footer {
+    background-color: teal;
+    color: white;
+    font: {
+        weight: 300;
+        size: 16px;
+    }
+    text-transform: lowercase;
+}

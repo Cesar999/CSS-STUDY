@@ -1,0 +1,26 @@
+$small: 600px;
+$large: 1200px;
+
+@function between($from, $to, $fromWidth, $toWidth) {
+    $slope: ($to - $from) / ($toWidth - $fromWidth);
+    $base: $from - $slope * $fromWidth;
+    @return calc(#{$base} + #{100vw * $slope});
+}
+
+.content {
+/* The base (smallest) value. */
+  padding: 0px;
+
+  /* In $small it should be 0px and in $large it should be 180px,  */
+  /* In viewports between that its padding should be calculated */
+  @media (min-width: $small) {
+    padding-left: between(0px, 180px, $small, $large);
+    padding-right: between(0px, 100px, $small, $large);
+  }
+
+/* In $large we cap the value at 180px */
+  @media (min-width: $large) {
+    padding: 0 180px;
+  }
+
+}

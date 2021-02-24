@@ -1,0 +1,13 @@
+.content {
+  /* The base (smallest) value. */
+  padding: 0px;
+  /* In $small it should be 0px and in $large it should be 180px,  */
+  /* In viewports between that its padding should be calculated */
+  /* In $large we cap the value at 180px */ }
+  @media (min-width: 600px) {
+    .content {
+      padding-left: calc(-180px + 30vw);
+      padding-right: calc(-100px + 16.66667vw); } }
+  @media (min-width: 1200px) {
+    .content {
+      padding: 0 180px; } }

@@ -1,0 +1,23 @@
+.button {
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+  border: none;
+  box-sizing: border-box;
+  height: 80px;
+  width: 100px; }
+  .button:hover {
+    color: teal;
+    background-color: white;
+    cursor: pointer;
+    border: 2px solid teal; }
+
+.list {
+  border: 2px solid #C90873;
+  margin: 0;
+  padding: 30px;
+  list-style-position: inside;
+  list-style-type: lower-greek; }
+  .list .list-item {
+    display: list-item; }

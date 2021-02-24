@@ -1,0 +1,27 @@
+%border {
+    border: 4px solid blue;
+    background-color: rgba(135, 135, 228, 0.795);
+
+    &:hover { 
+        border: 4px solid red;
+        background-color: rgba(238, 125, 125, 0.815);
+    }
+}
+
+.text {
+    cursor: pointer;
+    @extend %border;
+}
+
+.border {
+    border: 4px dashed green;
+    width: 100%;
+}
+
+.header {
+    @extend .border;
+    border-color: blue;
+}
+.footer {
+    @extend .border;
+}

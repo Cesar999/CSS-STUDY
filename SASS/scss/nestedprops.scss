@@ -1,0 +1,25 @@
+.container {
+
+    .content {
+
+        .title {
+            background-color: gray;
+            border: {
+                radius: 50%;
+            }
+        }
+
+        .text {
+
+            font: {
+                family: Lucida Sans Unicode;
+                size: 20px;
+                weight: bold;
+                variant: small-caps;
+            }
+
+        }
+
+    }
+
+}

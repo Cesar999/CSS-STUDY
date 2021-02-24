@@ -1,0 +1,10 @@
+.container {
+  font-family: Helvetica, sans-serif;
+  color: #8c1aa3; }
+
+.header, .footer, .title {
+  color: #1d69db; }
+
+.list .list-item {
+  color: #0d9942;
+  font-family: "Courier New", Courier, monospace; }

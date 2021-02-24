@@ -1,0 +1,24 @@
+$border-colors: #e61c0d, #12ce21, #1cb9e0, #e5e90d;
+$sizes: 10px, 20px, 30px, 40px;
+
+@each $size, $index in $sizes {
+    .item-#{$size} {
+        font-size: $size;
+    }
+}
+
+@for $i from 1 through length($sizes){
+    $color: nth($border-colors, $i);
+    $size: nth($sizes, $i);
+    .item-#{$size} {
+        border-width: 4;
+        border-color: $color;
+        @if($i == 2){
+            border-style: dotted;
+        } @else if ($i == 3){
+            border-style: double;
+        } @else {
+            border-style: solid;
+        }
+    }
+}

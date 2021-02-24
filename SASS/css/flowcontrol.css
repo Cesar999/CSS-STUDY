@@ -1,0 +1,31 @@
+.item-10px {
+  font-size: 10px; }
+
+.item-20px {
+  font-size: 20px; }
+
+.item-30px {
+  font-size: 30px; }
+
+.item-40px {
+  font-size: 40px; }
+
+.item-10px {
+  border-width: 4;
+  border-color: #e61c0d;
+  border-style: solid; }
+
+.item-20px {
+  border-width: 4;
+  border-color: #12ce21;
+  border-style: dotted; }
+
+.item-30px {
+  border-width: 4;
+  border-color: #1cb9e0;
+  border-style: double; }
+
+.item-40px {
+  border-width: 4;
+  border-color: #e5e90d;
+  border-style: solid; }

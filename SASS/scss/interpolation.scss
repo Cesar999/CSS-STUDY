@@ -1,0 +1,20 @@
+@mixin inline-animation($duration) {
+    $name: inline-#{unique-id()};
+    animation-name: $name;
+    animation-duration: $duration;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+
+    @keyframes #{$name} {
+      @content;
+    }
+
+}
+  
+.fading {
+    @include inline-animation(2s) {
+      from { opacity: 1}
+      to { opacity: 0}
+    }
+}

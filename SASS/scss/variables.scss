@@ -1,0 +1,21 @@
+$font-stack: Helvetica, sans-serif;
+$font-items: 'Courier New', Courier, monospace;
+$primary-color: #1d69db;
+$secundary-color: #8c1aa3;
+
+.container {
+    font-family: $font-stack;
+    color: $secundary-color;
+}
+
+.header, .footer, .title {
+    color: $primary-color;
+}
+
+.list {
+    .list-item {
+        $primary-color: #0d9942;
+        color: $primary-color;
+        font-family: $font-items;
+    }
+}
