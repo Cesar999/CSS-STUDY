@@ -152,6 +152,8 @@ TAGS?
         <th>	Defines a header cell in a table
         <tr>	Defines a row in a table
         <td>	Defines a cell in a table
+        colspan: The colspan attribute defines the number of columns a cell should span.
+        rowspan: The rowspan attribute specifies the number of rows a cell should span.
 
     forms and inputs tags:
         <form>	Defines an HTML form for user input
@@ -173,6 +175,7 @@ TAGS?
     .\CSS\tags.html
     .\CSS\list.html
     .\CSS\tables.html
+    .\CSS\tablespan.html
     .\CSS\forms.html
 
 entities, symbols and codes?
@@ -503,6 +506,19 @@ Margin collapse?
 
     .\CSS\boxmodel.html
 
+border / outline?
+    Border: The border shorthand CSS property sets an element's border. It sets the values of border-width, border-style, and border-color.  The border will be invisible if its style is not defined. This is because the style defaults to none.
+    /* width | style | color */
+    border: medium dashed green;
+
+    Outline: The outline will be invisible for many elements if its style is not defined. This is because the style defaults to none. A notable exception is input elements, which are given default styling by browsers
+    /* color | style | width */
+    outline: green solid 3px;
+
+    Borders and outlines are very similar. However, outlines differ from borders in the following ways:
+        Outlines never take up space, as they are drawn outside of an element's content.
+        According to the spec, outlines don't have to be rectangular, although they usually are.
+
 border-radius?
     The border-radius CSS property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners.
     This property allows you to add rounded corners to elements! 
@@ -774,6 +790,16 @@ lists?
 
     .\CSS\list.html
 
+Object-fit / Object-position?
+    The object-fit CSS property sets how the content of a replaced element, such as an <img> or <video>, should be resized to fit its container.
+        contain: The replaced content is scaled to maintain its aspect ratio while fitting within the element’s content box. The entire object is made to fill the box, while preserving its aspect ratio, so the object will be "letterboxed" if its aspect ratio does not match the aspect ratio of the box.
+        cover: The replaced content is sized to maintain its aspect ratio while filling the element’s entire content box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be clipped to fit.
+        fill: The replaced content is sized to fill the element’s content box. The entire object will completely fill the box. If the object's aspect ratio does not match the aspect ratio of its box, then the object will be stretched to fit.
+        none: The replaced content is not resized.
+        scale-down: The content is sized as if none or contain were specified, whichever would result in a smaller concrete object size.
+
+    The object-position CSS property specifies the alignment of the selected replaced element's contents within the element's box. Areas of the box which aren't covered by the replaced element's object will show the element's background.
+        <position>: From one to four values that define the 2D position of the element. Relative or absolute offsets can be used.
 
 Float and Clear?
     The float CSS property specifies that an element should be placed along the left or right side of its container, 
@@ -859,7 +885,7 @@ Flexbox?
 
     Order:  flex items are laid out in the source order. However, the order property controls the order in which they appear in the flex container. 
 
-    Flex-grow: This defines the ability for a flex item to grow if necessary. It accepts a unit less value that serves as a proportion. It dictates what amount of the available space 		inside the flex container the item should take up. 
+    Flex-grow: This defines the ability for a flex item to grow if necessary. It accepts a unit less value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up. 
 
     Flex-shrink: This defines the ability for a flex item to shrink if necessary. 
 

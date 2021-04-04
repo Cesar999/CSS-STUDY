@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            text-align: center;
+            border-collapse: collapse
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </thead>
+        <tbody>
+            <tr>
+                <th>12:00pm</th>
+                <td rowspan="3">Maths</td>
+                <td rowspan="4" colspan="3">Web Development</td>
+                <td rowspan="3">Algorithms</td>
+            </tr>
+            <tr>
+                <th>1:00pm</thd>
+
+            </tr>
+            <tr>
+                <th>2:00pm</th>
+
+            </tr>
+            <tr>
+                <th>3:00pm</th>
+                <td>Protocols</td>
+                <td>Protocols</td>
+            </tr>
+            <tr>
+                <th>4:00pm</th>
+                <td rowspan="2">Databases</td>
+                <td rowspan="2" colspan="2">Machine Learning</td>
+                <td>UX/UI</td>
+                <td rowspan="2">Design Patterns</td>
+            </tr>
+            <tr>
+                <th>5:00pm</th>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

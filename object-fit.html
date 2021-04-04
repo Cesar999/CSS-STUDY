@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            width: 100vw;
+            max-width: 100%;
+            flex-wrap: wrap;
+        }
+        .container.japan img {
+            width: 400px;
+            height: 500px;
+            object-fit: cover;
+            object-position: -227px 0px;
+        }
+        .container.mexico img {
+            width: 400px;
+            height: 500px;
+            object-fit: contain;
+            object-position: 50% 50%;
+        }
+        .container.nether img {
+            width: 400px;
+            height: 500px;
+            object-fit: scale-down;
+            object-position: right top;
+        }
+    </style>
+</head>
+<body>
+    <div class="container japan">
+        <img src='./japan.jpg'>
+    </div>
+    <div class="container mexico">
+        <img src='./mexico.jpg'>
+    </div>
+    <div class="container nether">
+        <img src='./netherlands.jpg'>
+    </div>
+</body>
+</html>
