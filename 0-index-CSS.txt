@@ -1298,7 +1298,7 @@ SVG?
         stroke-width: The stroke-width property defines the thickness of a line, text or outline of an element.
         stroke-linecap: The stroke-linecap property defines different types of endings to an open path.
         stroke-dasharray: The stroke-dasharray property is used to create dashed lines.
-        troke-dashoffset: attribute is a presentation attribute defining an offset on the rendering of the associated dash array.
+        stroke-dashoffset: attribute is a presentation attribute defining an offset on the rendering of the associated dash array.
 
     fill: Using fill sets the color inside the object.
 
@@ -1311,8 +1311,11 @@ SVG?
         Masking on the other hand allows soft edges by taking transparency and grey values of the mask into account.
         The mask attribute is a presentation attribute mainly used to bind a given <mask> element with the element the attribute belongs to.
 
+    The <symbol> element is used to define graphical template objects which can be instantiated by a <use> element. The use of symbol elements for graphics that are used multiple times in the same document adds structure and semantics. The SVG <symbol> element is used to define reusable symbols. The shapes nested inside a <symbol> are not displayed unless referenced by a <use> element.
+
     .\CSS\svgs1.html
     .\CSS\svgs2.html
+    .\SASS\svg-text.html
 
 SVG Filters?
 
