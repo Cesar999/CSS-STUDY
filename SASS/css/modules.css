@@ -3,14 +3,45 @@
   color: white;
   font-weight: bold;
   font-size: 24px;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+}
 
 .footer {
   background-color: teal;
   color: white;
   font-weight: 300;
   font-size: 16px;
-  text-transform: lowercase; }
+  text-transform: lowercase;
+}
+
+.header {
+  background-color: tomato;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.footer {
+  background-color: teal;
+  color: white;
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: lowercase;
+}
 
 .content {
-  background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%); }
+  background: linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+}
+
+.button {
+  border-radius: 15px;
+  padding: 20px;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=modules.css.map */

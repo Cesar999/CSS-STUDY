@@ -1,5 +1,17 @@
-@import './partials';
-@import './moduletoimport.scss';
+@use "button";
+
+@import 'partials';
+@import 'moduletoimport.scss';
+
+.button {
+  @include button.rounded;
+  padding: 5px + button.$radius;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  font-size: 24px;
+  font-weight: bold;
+}
 
 // @import './mystyles.scss';
 // @import './mystyles.scss';

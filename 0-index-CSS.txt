@@ -1,7 +1,4 @@
-
-
-******************************************** BASIC HTML ********************************************************************************************************************************
-
+******************************************** BASIC HTML ********************************************
 
 HTML5
     HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).
@@ -251,7 +248,7 @@ accessibility?
 
     Roles — These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of HTML5 structural elements e.g. role="navigation" (<nav>) or role="complementary" (<aside>), but there are also others that describe different pages structures, such as role="banner", role="search", role="tabgroup", role="tab", etc., which are commonly found in UIs.
 
-    Properties — These define properties of elements, which can be used to give them extra meaning or semantics. As an example, aria-required="true" specifies that a form input needs to be filled in to be valid, whereas aria-labelledby="label" allows you to put an ID on an element, then reference it as being the label for anything else on the page, including multiple elements, which is not possible using <label for="input">. As an example, you could use aria-labelledby to specify that a key description contained in a <div> is the label for multiple table cells, or you could use it as an alternative to image alt text — specify existing information on the page as an image's alt text, rather than having to repeat it inside the alt attribute. You can see an example of this at Text alternatives.
+    Properties — These define properties of elements, which can be used to give them extra meaning or semantics. As an example, aria-required="true" specifies that a form input needs to be filled in to be valid, whereas aria-labelledby="label" allows you to put an ID on an element, then reference it as being the label for anything else on the page, including multiple elements, which is not possible using <label for="input">. As an example, you could use aria-labelledby to specify that a key description contained in a <div> is the label for multiple table cells, or you could use it as an alternative to image alt text — specify existing information on the page as an image's alt text, rather than having to repeat it inside the alt attribute.
 
     States — Special properties that define the current conditions of elements, such as aria-disabled="true", which specifies to a screenreader that a form input is currently disabled. States differ from properties in that properties don't change throughout the lifecycle of an app, whereas states can change, generally programmatically via JavaScript.
 
@@ -289,7 +286,7 @@ accessibility?
     States:
         aria-disabled: Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. See related aria-hidden and aria-readonly.
 
-        aria-hiiden: Adding aria-hidden="true" to an element removes that element and all of its children from the accessibility tree.  Using aria-hidden="false" will not re-expose the element to assistive technology if any of its parents specify aria-hidden="true". This can improve the experience for assistive technology users by hiding:
+        aria-hidden: Adding aria-hidden="true" to an element removes that element and all of its children from the accessibility tree.  Using aria-hidden="false" will not re-expose the element to assistive technology if any of its parents specify aria-hidden="true". This can improve the experience for assistive technology users by hiding:
             purely decorative content, such as icons or images
             duplicated content, such as repeated text
             offscreen or collapsed content, such as menus
@@ -297,7 +294,7 @@ accessibility?
         aria-readonly: Indicates that the element is not editable, but is otherwise operable. This means the user can read but not set the value of the widget. Readonly elements are relevant to the user, and application authors SHOULD NOT restrict navigation to the element or its focusable descendants.
 
 tab-index?
-    The tabindex global attribute indicates if its element can be focused, and if/where it participates in sequential keyboard navigation (usually with the Tab key, hence the name). makes them tabbleable. Avoid using the tabindex attribute in conjunction with non-interactive content to make something intended to be interactive focusable by keyboard input.
+    The tabindex global attribute indicates if its element can be focused, and if/where it participates in sequential keyboard navigation (usually with the Tab key, hence the name). Avoid using the tabindex attribute in conjunction with non-interactive content to make something intended to be interactive focusable by keyboard input.
 
     tabindex="-1": A negative value (usually tabindex="-1") means that the element is not reachable via sequential keyboard navigation, but could be focused with Javascript or visually by clicking with the mouse. It's mostly useful to create accessible widgets with JavaScript.
 
@@ -338,7 +335,7 @@ inputs types/attributes?
 
     .\CSS\forms.html
 
-    There are CSS selectors that can specification target form controls based on their UI features, also known as UI pseudo-classes. The input element can also be targeted by type with attribute selectors.
+    There are CSS selectors that can target form controls based on their UI features, also known as UI pseudo-classes. The input element can also be targeted by type with attribute selectors.
 
         :enabled: Any currently enabled element that can be activated (selected, clicked on, typed into, etc.) or accept focus and also has a disabled state, in which it can't be activated or accept focus.
 
@@ -542,7 +539,7 @@ border-radius?
     .\CSS\border.html
 
 box-shadow?
-    The box-shadow CSS property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radii, and color.
+    The box-shadow CSS property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radio, and color.
     blur-radius the larger this value, the bigger the blur, so the shadow becomes bigger and lighter. Negative values are not allowed. 
     spread-radius the positive values will cause the shadow to expand and grow bigger, negative values will cause the shadow to shrink.
 
@@ -636,7 +633,7 @@ z-index?
     .\CSS\index-z.html
 
 Visibility, Opacity and Display?
-    These properties hidde elements from user interface view.
+    These properties hide elements from the user interface view.
         opacity 0: occupies space, consume click events.
         visibility hidden: occupies space, doesn't consume click events.
         Display none: doesn't occupies space, doesn't consume click events.
@@ -721,6 +718,9 @@ text and fonts?
 
     The line-height CSS property sets the height of a line box. It's commonly used to set the distance between lines of text. On block-level elements, it specifies the minimum height of line boxes within the element. On non-replaced inline elements, it specifies the height that is used to calculate line box height.
     Depends on the user agent. Desktop browsers (including Firefox) use a default value of roughly 1.2, depending on the element's font-family.
+        normal	A normal line height. This is default	
+        number	A number that will be multiplied with the current font-size to set the line height	
+        length	A fixed line height in px, pt, cm, etc.
 
     The font-variant CSS shorthand property allows you to set all the font variants for a font. Mostly used for small caps.
 
@@ -801,9 +801,13 @@ Object-fit / Object-position?
     The object-position CSS property specifies the alignment of the selected replaced element's contents within the element's box. Areas of the box which aren't covered by the replaced element's object will show the element's background.
         <position>: From one to four values that define the 2D position of the element. Relative or absolute offsets can be used.
 
+calc()?
+    The CSS function lets you perform calculations when specifying CSS property values. 
+    calc() function can do something that no preprocessor can: mix any kind of units. Preprocessors can only mix units with a fixed relation between them, like angular units, time units, frequency units, resolution units and certain length units.
+    The calc() function should work as a value in all places where a number value, with or without specified units, works. 
+
 Float and Clear?
-    The float CSS property specifies that an element should be placed along the left or right side of its container, 
-    allowing text and inline elements to wrap around it. The element is removed from the normal flow of the web page, though still remaining a part of the flow (in contrast to absolute positioning). 
+    The float CSS property specifies that an element should be placed along the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the web page, though still remaining a part of the flow (in contrast to absolute positioning). 
     left: The element must float on the left side of its containing block.
     right: The element must float on the right side of its containing block.
     none: The element must not float.
@@ -872,7 +876,6 @@ Flexbox?
         flex-end: cross-end margin edge of the items is placed on the cross-end line
         center: items are centered in the cross-axis
         baseline: items are aligned such as their baselines align
-
 
     Align-content: This aligns a flex container's lines within when there is extra space in the cross-axis. this property has no effect when there is only one line of flex items. 
         spaces between main-axis (rows or columns).
@@ -1162,6 +1165,8 @@ background?
     background-image: The background-image property sets one or more background images for an element. "url(img_tree.gif)"
     background-position: The background-position property sets the starting position of a background image. center|top bottom|x% y%|xpos ypos;
     background-size: The background-size property specifies the size of the background images.  auto|length|cover|contain;
+        cover: Resize the background image to cover the entire container, even if it has to stretch the image or cut a little bit off one of the edges	
+        contain: Resize the background image to make sure the image is fully visible
     background-repeat: The background-repeat property sets if/how a background image will be repeated. repeat|repeat-x|repeat-y|no-repeat;
     background-attachment: The background-attachment property sets whether a background image scrolls with the rest of the page, or is fixed. scroll|fixed|local
     background-origin: The background-origin property specifies the origin position (the background positioning area) of a background image. padding-box|border-box|content-box;
@@ -1178,7 +1183,7 @@ background blend modes?
     isolation, a lesser used property used with mix-blend-mode for keeping elements from mixing together.
 
     background-blend-mode properties:
-        normal: the background-color will not bleed through the background-image.
+        normal: the background-color will not blend through the background-image.
         multiply: the background-image and background-color are multiplied and typically this leads to a darker image than before.
         screen: both image and color is inverted, multiplied and then inverted again.
         overlay: the background-color is mixed with the background-image to reflect the lightness or darkness of the backdrop.
@@ -1291,13 +1296,16 @@ SVG?
 
         pathLength: The pathLength attribute lets authors specify a total length for the path, in user units. This value is then used to calibrate the browser's distance calculations with those of the author, by scaling all distance computations using the ratio pathLength/(computed value of path length). This can affect the actual rendered lengths of paths; including text paths, animation paths, and various stroke operations. Basically, all computations that require the length of the path. stroke-dasharray, for example, will assume the start of the path being 0 and the end point the value defined in the pathLength attribute.
 
+        The viewBox attribute defines the position and dimension, in user space, of an SVG viewport. 
+        The value of the viewBox attribute is a list of four numbers: min-x, min-y, width and height. The numbers separated by whitespace and/or a comma, which specify a rectangle in user space which is mapped to the bounds of the viewport established for the associated SVG element (not the browser viewport).
+
     Text <text>: element is used to define a text.  <text x="0" y="15">I love SVG!</text>
 
     SVG Stroke Properties. SVG offers a wide range of stroke properties. In this chapter we will look at the following:
         stroke: The stroke property defines the color of a line, text or outline of an element.
         stroke-width: The stroke-width property defines the thickness of a line, text or outline of an element.
         stroke-linecap: The stroke-linecap property defines different types of endings to an open path.
-        stroke-dasharray: The stroke-dasharray property is used to create dashed lines.
+        stroke-dasharray: The stroke-dasharray property is used to create dashed lines. is a presentation attribute defining the pattern of dashes and gaps used to paint the outline of the shape;
         stroke-dashoffset: attribute is a presentation attribute defining an offset on the rendering of the associated dash array.
 
     fill: Using fill sets the color inside the object.
@@ -1441,6 +1449,8 @@ SCSS?
     Lists: contain a sequence of other values. In Sass, elements in lists can be separated by commas (Helvetica, Arial, sans-serif) or by spaces (10px 15px 0 0), as long as it’s consistent within the list. Unlike most other languages, lists in Sass don’t require special brackets; any expressions separated with spaces or commas count as a list. However, you’re allowed to write lists with square brackets ([line1 line2]), which is useful when using grid-template-columns.
         Lists aren’t much use if you can’t get values out of them. You can use the list.nth($list, $n) function to get the element at a given index in a list. The first argument is the list itself, and the second is the index of the value you want to get out.
         It’s also useful to add elements to a list. The list.append($list, $val) function takes a list and a value, and returns a copy of the list with the value added to the end. Note that because Sass lists are immutable, it doesn’t modify the original list.
+        length(list): Returns the length of the list.
+        index(list, value): Returns the index position for the value in list.
 
     Flow Control: Sass provides a number of at-rules that make it possible to control whether styles get emitted, or to emit them multiple times with small variations. They can also be used in mixins and functions to write small algorithms to make writing your Sass easier.
 
@@ -1457,6 +1467,25 @@ SCSS?
     Modules: You don't have to write all your Sass in a single file. You can split it up however you want with the @use rule. This rule loads another Sass file as a module, which means you can refer to its variables, mixins, and functions in your Sass file with a namespace based on the filename. Using a file will also include the CSS it generates in your compiled output!
 
     @import: Sass extends CSS's @import rule with the ability to import Sass and CSS stylesheets, providing access to mixins, functions, and variables and combining multiple stylesheets' CSS together. Unlike plain CSS imports, which require the browser to make multiple HTTP requests as it renders your page, Sass imports are handled entirely during compilation. Imports are usually written at the top level of a stylesheet, but they don’t have to be. They can nested within style rules or plain CSS at-rules as well. The imported CSS is nested in that context, which makes nested imports useful for scoping a chunk of CSS to a particular element or media query. 
+
+    Sass just launched a major new feature you might recognize from other languages: a module system. This is a big step forward for @import. one of the most-used Sass-features. While the current @import rule allows you to pull in third-party packages, and split your Sass into manageable “partials,” it has a few limitations:
+        @import is also a CSS feature, and the differences can be confusing
+        If you @import the same file multiple times, it can slow down compilation, cause override conflicts, and generate duplicate output.
+        Everything is in the global namespace, including third-party packages – so my color() function might override your existing color() function, or vice versa.
+        When you use a function like color(). it’s impossible to know exactly where it was defined. Which @import does it come from?
+
+    The @use rule loads mixins, functions, and variables from other Sass stylesheets, and combines CSS from multiple stylesheets together. Stylesheets loaded by @use are called "modules". Sass also provides built-in modules full of useful functions.
+    You can access variables, functions, and mixins from another module by writing <namespace>.<variable>, <namespace>.<function>(), or @include <namespace>.<mixin>(). By default, the namespace is just the last component of the module’s URL.
+    Because @use adds namespaces to member names, it’s safe to choose very simple names like $radius or $width when writing a stylesheet. This is different from the old @import rule, which encouraged that users write long names like $mat-corner-radius to avoid conflicts with other libraries, and it helps keep your stylesheets clear and easy to read!
+    As a stylesheet author, you may not want all the members you define to be available outside your stylesheet. Sass makes it easy to define a private member by starting its name with either - or _. These members will work just like normal within the stylesheet that defines them, but they won’t be part of a module’s public API. That means stylesheets that load your module can’t see them!
+
+    The new @use is similar to @import. but has some notable differences:
+        The file is only imported once, no matter how many times you @use it in a project.
+        Variables, mixins, and functions (what Sass calls “members”) that start with an underscore (_) or hyphen (-) are considered private, and not imported.
+        Members from the used file (buttons.scss in this case) are only made available locally, but not passed along to future imports.
+        Similarly, @extends will only apply up the chain; extending selectors in imported files, but not extending files that import this one.
+        All imported members are namespaced by default.
+        When we @use a file, Sass automatically generates a namespace based on the file name:
 
     .\SASS\index.html (npm run scss)
     .\SASS\scss\mystyles.scss

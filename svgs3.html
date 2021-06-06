@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body {
+            background: #111;
+            font: 5em 'Itim', cursive;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .text {
+            fill: none;
+            stroke-width: 3;
+            stroke-linejoin: round;
+            animation: stroke 2s linear forwards;
+        }
+
+        .text:nth-child(1) {
+            stroke: #F2385A;
+            animation-delay: 0s;
+            stroke-dasharray: 250;
+            stroke-dashoffset: 250;
+        }
+        .text:nth-child(2) {
+            stroke: #F5A503;
+            animation-delay: 2s;
+            stroke-dasharray: 320;
+            stroke-dashoffset: 320;
+        }
+        .text:nth-child(3) {
+            stroke: #dd12dd;
+            animation-delay: 4s;
+            stroke-dasharray: 290;
+            stroke-dashoffset: 290;
+        }
+        .text:nth-child(4) {
+            stroke: #1ee939;
+            animation-delay: 6s;
+            stroke-dasharray: 210;
+            stroke-dashoffset: 210;
+        }
+        .text:nth-child(5) {
+            stroke: #135af5;
+            animation-delay: 8s;
+            stroke-dasharray: 230;
+            stroke-dashoffset: 230;
+        }
+
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 600 300">
+        <text class="text" text-anchor="middle" x="30%" y="50%">C</text>
+        <text class="text" text-anchor="middle" x="40%" y="50%">E</text>
+        <text class="text" text-anchor="middle" x="50%" y="50%">S</text>
+        <text class="text" text-anchor="middle" x="60%" y="50%">A</text>
+        <text class="text" text-anchor="middle" x="70%" y="50%">R</text>
+      </svg>
+</body>
+</html>
+
