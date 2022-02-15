@@ -1,0 +1,14 @@
+$icons: (
+  "cancel": "\2715",
+  "plane": "\2708",
+  "note": "\266B",
+  "star": "\2605",
+);
+
+@each $name, $glyph in $icons {
+  .icon-#{$name}:after {
+    display: inline-block;
+    font-family: "Icon Font";
+    content: $glyph;
+  }
+}

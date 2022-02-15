@@ -1,0 +1,26 @@
+@charset "UTF-8";
+.icon-cancel:after {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "✕";
+}
+
+.icon-plane:after {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "✈";
+}
+
+.icon-note:after {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "♫";
+}
+
+.icon-star:after {
+  display: inline-block;
+  font-family: "Icon Font";
+  content: "★";
+}
+
+/*# sourceMappingURL=list-maps.css.map */

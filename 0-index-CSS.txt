@@ -4,7 +4,7 @@ HTML5
     HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript).
 
     HTML5 is the latest evolution of the standard that defines HTML. The term represents two different concepts. It is a new version of the language HTML, with new elements, attributes, and behaviors, and a larger set of technologies that allows the building of more diverse and powerful Web sites and applications. 
-    HTML5 has a plethora of new additional features to its predecessors, such as offline media storage support, more specific content elements (like footer, header, navigation, etc.), simpler inline doctype, audio, and video embedding support.
+    HTML5 has an abundance of new additional features to its predecessors, such as offline media storage support, more specific content elements (like footer, header, navigation, etc.), simpler inline doctype, audio, and video embedding support.
 
     The data-* attribute is used to store custom data private to the page or application. The data-* attribute gives us the ability to embed custom data attributes on all HTML elements.
 
@@ -58,7 +58,7 @@ Metadata
         The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
         The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
 
-        This means that the browser will (probably) render the width of the page at the width of its own screen. So if that screen is 320px wide, the browser window will be 320px wide, rather than way zoomed out and showing 960px (or whatever that device does by default, in lieu of a responsive meta tag).
+        This means that the browser will (probably) render the width of the page at the width of its own screen. So if that screen is 320px wide, the browser window will be 320px wide, rather than way zoomed out and showing 960px (or whatever that device does by default).
     
 TAGS?
 
@@ -110,6 +110,7 @@ TAGS?
         <title>	Defines a title for the document
         <link>	Defines the relationship between a document and an external resource (most used to link to style sheets)
         <style>	Defines style information for a document
+        <body>  Contains the elements to display in the browser.
 
     most common tags:
         <div>	Defines a section in a document
@@ -135,6 +136,8 @@ TAGS?
         <img>	Defines an image
         <audio>	Defines embedded sound content
         <video>	Defines embedded video content
+        <source> The <source> HTML element specifies multiple media resources for the <picture>, the <audio> element, or the <video> element. It is an empty element, meaning that it has no content and does not have a closing tag.
+        <picture> The HTML element contains zero or more elements and one element to offer alternative versions of an image for different display / device scenarios. The browser will consider each child <source> element and choose the best match among them. If no matches are found — or the browser doesn't support the <picture> element — the URL of the <img> element's srcattribute is selected. The selected image is then presented in the space occupied by the <img> element.
 
     lists tags:
         <ul>	Defines an unordered list
@@ -176,9 +179,9 @@ TAGS?
     .\CSS\forms.html
 
 entities, symbols and codes?
-    An HTML entity is a piece of text ("string") that begins with an ampersand (&) and ends with a semicolon (;) . Entities are frequently used to display reserved characters (which would otherwise be interpreted as HTML code), and invisible characters (like non-breaking spaces). You can also use them in place of other characters that are difficult to type with a standard keyboard. 
+    An HTML entity is a piece of text ("string") that begins with an ampersand (&) and ends with a semicolon (;). Entities are frequently used to display reserved characters (which would otherwise be interpreted as HTML code), and invisible characters (like non-breaking spaces). You can also use them in place of other characters that are difficult to type with a standard keyboard. 
 
-    there are five formats: Unicode, Hex code, HTML code, HTML entity and .
+    there are five formats: Unicode, Hex code, HTML code, HTML entity and UTF-16.
     copyright sign:
         U+000A9 UNICODE
         &#xA9; HEX CODE
@@ -238,20 +241,18 @@ accessibility?
         Page structure
         Labelling of elements
         Keyboard navigation
-        Aural experience
+        Aural experience: the audible component of brand experience​
         General usability
 
     What is the Americans with Disabilities Act (ADA)? The Americans with Disabilities Act (ADA) became law in 1990. The ADA is a civil rights law that prohibits discrimination against individuals with disabilities in all areas of public life, including jobs, schools, transportation, and all public and private places that are open to the general public. The purpose of the law is to make sure that people with disabilities have the same rights and opportunities as everyone else. 
 
     Accessible Rich Internet Applications (ARIA) is a set of attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities. ARIA is a set of attributes that you can add to HTML elements.
 
-
     Roles — These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of HTML5 structural elements e.g. role="navigation" (<nav>) or role="complementary" (<aside>), but there are also others that describe different pages structures, such as role="banner", role="search", role="tabgroup", role="tab", etc., which are commonly found in UIs.
 
     Properties — These define properties of elements, which can be used to give them extra meaning or semantics. As an example, aria-required="true" specifies that a form input needs to be filled in to be valid, whereas aria-labelledby="label" allows you to put an ID on an element, then reference it as being the label for anything else on the page, including multiple elements, which is not possible using <label for="input">. As an example, you could use aria-labelledby to specify that a key description contained in a <div> is the label for multiple table cells, or you could use it as an alternative to image alt text — specify existing information on the page as an image's alt text, rather than having to repeat it inside the alt attribute.
 
     States — Special properties that define the current conditions of elements, such as aria-disabled="true", which specifies to a screenreader that a form input is currently disabled. States differ from properties in that properties don't change throughout the lifecycle of an app, whereas states can change, generally programmatically via JavaScript.
-
 
     roles:
         role="checkbox": The checkbox role is used for checkable interactive controls. Elements containing role="checkbox" must also include the aria-checked attribute to expose the checkbox's state to assistive technology.
@@ -363,9 +364,7 @@ data-* (custom properties)?
     Note that, as data attributes are plain HTML attributes, you can even access them from CSS.
 
 
-
 ******************************************** CSS ********************************************************************************************************************************
-
 
 
 What is CSS?
@@ -419,14 +418,16 @@ Specificity?
 
 CSS units of measurement?
     CSS supports a number of measurements including absolute units such as inches, centimeters, points, and so on, as well as relative measures such as percentages and em units. Some of these units are:
-    px	Defines a measurement in screen pixels.
-    %	Defines a measurement as a percentage relative to another value, typically an enclosing element.
-    em	relative to the font size of its direct or nearest parent.
+    px  Defines a measurement in screen pixels.
+    %   Defines a measurement as a percentage relative to another value, typically an enclosing element.
+    em  relative to the font size of its direct or nearest parent.
     rem is only relative to the html (root) font-size.
-    vh	1% of viewport height.	
-    vw	1% of viewport width.
-    cm	Defines a measurement in centimeters.
-    in	Defines a measurement in inches.
+    vh  1% of viewport height.    
+    vw  1% of viewport width.
+    vmin  1% of viewport's smaller (vw or vh) dimension
+    vmax  1% of viewport's larger (vw or vh) dimension
+    cm  Defines a measurement in centimeters.
+    in  Defines a measurement in inches.
     For Screen I recommend to use %, em and px. For print documents cm, in and em.
 
 Display Property?
@@ -440,11 +441,11 @@ Display Property?
 
     contents: Makes the container disappear, making the child elements children of the element the next level up in the DOM.
 
-    flex:	Displays an element as a block-level flex container.
+    flex: Displays an element as a block-level flex container.
 
-    grid:	Displays an element as a block-level grid container.
+    grid: Displays an element as a block-level grid container.
 
-    none:	The element is completely removed.
+    none: The element is completely removed.
 
     .\CSS\display.html
 
@@ -460,7 +461,7 @@ Position Property?
     Absolute: Element is positioned relative to the nearest positioned ancestor.
     However; if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling.
 
-    Sticky: Element is positioned based on the user's scroll position. The element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the view-port then it "sticks" in place (like position:fixed).
+    Sticky: Element is positioned based on the user's scroll position. The element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the view-port then it "sticks" in place (like position:fixed) until it meets the end of its parent element.
 
     .\CSS\position.html
     .\CSS\sticky.html
@@ -591,7 +592,7 @@ What are gradients in CSS?
             closest-side: The gradient will end at side closest to the center of the shape. If two sides match this criteria, then it will be evenly distributed.
             farthest-side (default): The opposite of closest-side, where the gradient will end at the side furthest from the shape’s center.
             closest-corner: The gradient will end at the corner that matches as the closest to the shape’s center.
-            farthest-cornerThe opposite of closest-corner, where the gradient ends at the corner that is located furthest from the shape’s center.
+            farthest-corner: The opposite of closest-corner, where the gradient ends at the corner that is located furthest from the shape’s center.
             : We can specify a numeric value that serves as the circle’s radius. This has to be stated in positive pixels or relative units.
             percentage: A second numeric value can be provided to declare the explicit size of an ellipse, but not a circle. 
 
@@ -706,7 +707,7 @@ text and fonts?
 
     The font-family CSS property specifies a prioritized list of one or more font family names and/or generic family names for the selected element. The property should hold several font names as a "fallback" system. If the browser does not support the first font, it tries the next font, and so on. Start with the font you want, and end with a generic family, to let the browser pick a similar font in the generic family, if no other fonts are available.
 
-    The font-size CSS property sets the size of the font. Changing the font size also updates the sizes of the font size-relative <length> units, such as em, ex, and so forth.
+    The font-size CSS property sets the size of the font. Changing the font size also updates the sizes of the font size-relative <length> units, such as em, px, and so forth.
 
         Setting the font size in pixel values (px) is a good choice when you need pixel accuracy. A px value is static. This is an OS-independent and cross-browser way of literally telling the browsers to render the letters at exactly the number of pixels in height that you specified.
 
@@ -742,6 +743,8 @@ text and fonts?
     hyphens: The hyphens CSS property specifies how words should be hyphenated when text wraps across multiple lines. It can prevent hyphenation entirely, hyphenate at manually-specified points within the text, or let the browser automatically insert hyphens where appropriate.
 
     text-justify: The text-justify CSS property sets what type of justification should be applied to text when text-align: justify; is set on an element. none|auto|inter-word|inter-character.
+        inter-word	Increases/Decreases the space between words	
+        inter-character	Increases/Decreases the space between characters
 
     text-align: The text-align CSS property sets the horizontal alignment of a block element or table-cell box. This means it works like vertical-align but in the horizontal direction.
     start|end|left|right|center|justify|justify-all;
@@ -801,10 +804,23 @@ Object-fit / Object-position?
     The object-position CSS property specifies the alignment of the selected replaced element's contents within the element's box. Areas of the box which aren't covered by the replaced element's object will show the element's background.
         <position>: From one to four values that define the 2D position of the element. Relative or absolute offsets can be used.
 
+    .\CSS\object-fit.html
+
 calc()?
     The CSS function lets you perform calculations when specifying CSS property values. 
     calc() function can do something that no preprocessor can: mix any kind of units. Preprocessors can only mix units with a fixed relation between them, like angular units, time units, frequency units, resolution units and certain length units.
     The calc() function should work as a value in all places where a number value, with or without specified units, works. 
+
+Variables?
+    Custom properties (--*): CSS variables. Property names that are prefixed with --, like --example-name, represent custom properties that contain a value that can be used in other declarations using the var() function. Custom properties are scoped to the element(s) they are declared on, and participate in the cascade: the value of such a custom property is that from the declaration decided by the cascading algorithm.
+
+    The var() function is used to insert the value of a CSS variable.
+    CSS variables have access to the DOM, which means that you can create variables with local or global scope, change the variables with JavaScript, and change the variables based on media queries.
+    A good way to use CSS variables is when it comes to the colors of your design. Instead of copy and paste the same colors over and over again, you can place them in variables.
+
+    Global variables can be accessed/used through the entire document, while local variables can be used only inside the selector where it is declared.
+    To create a variable with global scope, declare it inside the :root selector. The :root selector matches the document's root element.
+    To create a variable with local scope, declare it inside the selector that is going to use it.
 
 Float and Clear?
     The float CSS property specifies that an element should be placed along the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the web page, though still remaining a part of the flow (in contrast to absolute positioning). 
@@ -912,7 +928,7 @@ Grid?
     is a two-dimensional layout mode that divides space into columns & rows.
 
     Grid Container
-    The element on which display: grid is applied. It's the direct parent of all the grid items. In this example container is the grid container.
+    The element on which display: grid is applied. It's the direct parent of all the grid items.
 
     Grid item
     The children (i.e. direct descendants) of the grid container. Here the item elements are grid items
@@ -943,25 +959,52 @@ Grid?
     grid-gap: 20px;
     grid-gap-row grid-gap-column = grid-gap: 20px 10px;
 
+    grid-auto-flow: CSS property controls how the auto-placement algorithm works, specifying exactly how auto-placed items get flowed into the grid. (row | column).
+
+    grid-auto-rows: CSS property specifies the size of an implicitly-created grid row track  or pattern of tracks.
+
+    grid-auto-columns: specifies the size of an implicitly created grid column.
+
     Grid template
     Defines the columns and rows of the grid with a space-separated list of values. The values represent the track size, and the space between them represents the grid line.
     grid-template-rows: 1fr 2fr 4fr 1fr;
     grid-template-columns: repeat(3, 1fr) 2fr;
 
-    The fr unit works only with the free space in the container.
-    grid-template-columns: repeat(12, 1fr); The free space in the container is distributed equally among 12 columns. Since the columns are only dealing with free space, grid-column-gap is not a factor. It was subtracted from the container width before the fr length was determined. 
-    Here's how the browser does the calculation:
-    (free space - gutters) / 12  = 1fr
+    You can assign some or all of the lines in your grid a name when you define your grid with the grid-template-rows and grid-template-columns properties.
+    grid-template-columns: [col-start-1] 150px [col-end-1 col-start-2] 150px [col-end-2 col-start-3] 150px [col-end-3];
+    grid-template-rows: [row-start-1] 150px [row-end-1 row-start-2] 150px [row-end-2 col-start-3] 150px [row-end-3];
+    grid-column: col-start-1/col-start-3;
+    grid-row: row-start-1/row-start-3;
 
-    The % when you're using percentages 
-    grid-template-columns: repeat(12, calc(100% / 12)); the container is divided into 12 columns, each having a width of 8.33333%. This is an actual length, unlike the fr unit, which only deals with free space. Both the column lengths and grid gaps are factored into the width.
-    Here's how the browser does the calculation:
-    8.33333% * 12 = 100%
-         +
-    11 * 10px     = 110px
-    There's a clear overflow. Note: grid-*-gap properties apply only between grid items – never between items and the container. That's why the number of grid-gaps is 11, not 13.)
-    This works:
-    grid-template-columns: repeat(12, calc(8.3333% - 9.1667px));
+    repeat(): CSS function represents a repeated fragment of the track list, allowing a large number of columns or rows that exhibit a recurring pattern to be written in a more compact form.
+
+        The fr unit works only with the free space in the container.
+        grid-template-columns: repeat(12, 1fr); The free space in the container is distributed equally among 12 columns. Since the columns are only dealing with free space, grid-column-gap is not a factor. It was subtracted from the container width before the fr length was determined. 
+        Here's how the browser does the calculation:
+        (free space - gutters) / 12  = 1fr
+
+        The % when you're using percentages 
+        grid-template-columns: repeat(12, calc(100% / 12)); the container is divided into 12 columns, each having a width of 8.33333%. This is an actual length, unlike the fr unit, which only deals with free space. Both the column lengths and grid gaps are factored into the width.
+        Here's how the browser does the calculation:
+        8.33333% * 12 = 100%
+            +
+        11 * 10px     = 110px
+        There's a clear overflow. Note: grid-*-gap properties apply only between grid items – never between items and the container. That's why the number of grid-gaps is 11, not 13.)
+        This works:
+        grid-template-columns: repeat(12, calc(8.3333% - 9.1667px));
+
+        minmax(): CSS function defines a size range greater than or equal to min and less than or equal to max. 
+        grid-template-columns: minmax(20px, auto) 1fr 1fr;
+
+        max-content: Represents the largest max-content contribution of the grid items occupying the grid track.
+
+        min-content: Represents the largest min-content contribution of the grid items occupying the grid track.
+
+        auto-fill: If the grid container has a definite or maximal size in the relevant axis, then the number of repetitions is the largest possible positive integer that does not cause the grid to overflow its grid container.
+        auto-fill FILLS the row with as many columns as it can fit. So it creates implicit columns whenever a new column can fit, because it’s trying to FILL the row with as many columns as it can. The newly added columns can and may be empty, but they will still occupy a designated space in the row.
+
+        auto-fit: Behaves the same as auto-fill, except that after placing the grid items any empty repeated tracks are collapsed. 
+        auto-fit FITS the CURRENTLY AVAILABLE columns into the space by expanding them so that they take up any available space. The browser does that after FILLING that extra space with extra columns (as with auto-fill ) and then collapsing the empty ones.
 
     grid-template-areas: 
     Defines a grid template by referencing the names of the grid areas which are specified with the grid-area property. Repeating the name of a grid area causes the content to span those cells. A period signifies an empty cell. The syntax itself provides a visualization of the structure of the grid.
@@ -971,9 +1014,23 @@ Grid?
             "main main main side"
             "foot foot foot foot";
 
-    grid-area:
-    Gives an item a name so that it can be referenced by a template created with the grid-template-areas property. 
+    grid-area: Gives an item a name so that it can be referenced by a template created with the grid-template-areas property. 
     grid-area: head;
+
+    To align cells inside a grid container with a fixed height and width.
+    You can use align-content for the Y axis and justify-content for the X axis.
+    align-content: start;
+    justify-content: end;
+
+    align-items: sets the value align-selfover all direct descendants of a group. The align-self property indicates the alignment of an element within the block that contains it. In Flexbox it controls the alignment of the Cross Axis elements  (en-US) , in Grid Layout it controls the alignment of the elements on the Block axis within its grid area .
+
+    justify-items: property defines the default justify-self for all items of the box, giving them all a default way of justifying each box along the appropriate axis.
+
+    place-items: shorthand property allows you to align items along both the block and inline directions at once (i.e. the align-items and justify-items properties) in a relevant layout system such as Grid or Flexbox. If the second value is not set, the first value is also used for it.
+
+    justify-self: property sets the way a box is justified inside its alignment container along the appropriate axis.
+
+    align-self: aligns the flex items on the current flex line, replacing the value of align-items. If the transversal limit of any of the elements is defined as  auto, the value of align-self is ignored.
 
     .\CSS\grid.html
 
@@ -1026,9 +1083,9 @@ Animations === @keyframes?
 
     The animation-name CSS property specifies the names of one or more @keyframes at-rules describing the animation or animations to apply to the element.
 
-    The animation-duration CSS property sets the length of time that an animation takes to complete one cycle. Receive numbre representin seconds (s) or miliseconds (ms).
+    The animation-duration CSS property sets the length of time that an animation takes to complete one cycle. Receive number representing seconds (s) or miliseconds (ms).
 
-    animation-delay property specifies a delay for the start of an animation. Negative values are also allowed. If using negative values, the animation will start as if it had already been playing for N seconds
+    animation-delay property specifies a delay for the start of an animation. Negative values are also allowed. If using negative values, the animation will start as if it had already been playing for N seconds.
 
     The animation-iteration-count property specifies the number of times an animation should run. receives a number animation cycles or infinite repeat forever.
 
@@ -1065,7 +1122,7 @@ transform property?
     If the property has a value different than none, a stacking context will be created. In that case, the element will act as a containing block for any position: fixed; or position: absolute; elements that it contains.
     In CSS The Visual Formatting Model describes how user agents take the document tree, and process and display it for visual media.
 
-    scale(): Affects the size of the element. This also applies to the font-size, padding, height, and width of an element, too. It’s also a a shorthand function for the scaleX and scaleY functions.
+    scale(): Affects the size of the element. This also applies to the font-size, padding, height, and width of an element, too. It’s also a shorthand function for the scaleX and scaleY functions.
     skewX() and skewY(): Tilts an element to the left or right, like turning a rectangle into a parallelogram. skew() is a shorthand that combines skewX() and skewY() by accepting both values.
     translate(): Moves an element sideways or up and down. You can also use the translayeX() and translayeY() functions.
     rotate(): Rotates the element clockwise from its current position. You can also use the rotateX(), rotateY() and rotateZ() functions.
@@ -1082,6 +1139,8 @@ transform property?
     The perspective-origin and perspective properties are attached to the parent of a child transformed in 3-dimensional space, unlike the perspective() transform function which is placed on the element being transformed.
 
     The backface-visibility CSS property sets whether the back face of an element is visible when turned towards the user.
+
+    The transform-style CSS property sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element.
 
     The transform-origin CSS property sets the origin for an element's transformations. The transformation origin is the point around which a transformation is applied. For example, the transformation origin of the rotate() function is the center of rotation. The value must be a <length>, a <percentage>, or one of the keywords left, center, right, top, and bottom.
 
@@ -1152,6 +1211,10 @@ masking?
     The mask-origin CSS property sets the origin of a mask.
 
     The mask-composite CSS property represents a compositing operation used on the current mask layer with the mask layers below it.
+        add: The default value. The mask image layer closer to the user (source) is placed on top of the next mask image layer (destination). The combination is the final mask layer.
+        subtract: The mask image layer closer to the user is placed where it falls outside of the next mask image layer. In other words, the final combination is portions of the destination that don’t overlap the source.
+        intersect: The portions of source that overlap the destination replace the destination. In other words, the final combination is portions of the destination that overlap the source.
+        exclude: The non-overlapping.
 
     The mask-image CSS property sets the image that is used as mask layer for an element.
 
@@ -1209,7 +1272,7 @@ filter?
 
     The contrast() function adjusts the contrast of the input image. A value of 0% will create an image that is completely gray. A value of 100% leaves the input unchanged.
 
-    The grayscale() function converts the input image to grayscale. The value of amount defines the proportion of the conversion. A value of 100% is completely grayscale. A value of 0% leaves the input unchanged.The grayscale() function converts the input image to grayscale. The value of amount defines the proportion of the conversion. A value of 100% is completely grayscale. A value of 0% leaves the input unchanged.
+    The grayscale() function converts the input image to grayscale. The value of amount defines the proportion of the conversion. A value of 100% is completely grayscale. A value of 0% leaves the input unchanged. The grayscale() function converts the input image to grayscale. The value of amount defines the proportion of the conversion. A value of 100% is completely grayscale. A value of 0% leaves the input unchanged.
 
     The hue-rotate() function applies a hue rotation on the input image. The value of angle defines the number of degrees around the color circle the input samples will be adjusted. A value of 0deg leaves the input unchanged.
 
@@ -1301,7 +1364,7 @@ SVG?
 
     Text <text>: element is used to define a text.  <text x="0" y="15">I love SVG!</text>
 
-    SVG Stroke Properties. SVG offers a wide range of stroke properties. In this chapter we will look at the following:
+    SVG Stroke Properties. SVG offers a wide range of stroke properties.
         stroke: The stroke property defines the color of a line, text or outline of an element.
         stroke-width: The stroke-width property defines the thickness of a line, text or outline of an element.
         stroke-linecap: The stroke-linecap property defines different types of endings to an open path.
@@ -1416,13 +1479,13 @@ SCSS?
 
         Scope: Variables declared at the top level of a stylesheet are global. This means that they can be accessed anywhere in their module after they’ve been declared. But that’s not true for all variables. Those declared in blocks (curly braces in SCSS or indented code in Sass) are usually local, and can only be accessed within the block they were declared. Local variables can even be declared with the same name as a global variable. If this happens, there are actually two different variables with the same name: one local and one global. This helps ensure that an author writing a local variable doesn’t accidentally change the value of a global variable they aren’t even aware of.
 
-    Nesting Rules: When writing HTML you've probably noticed that it has a clear nested and visual hierarchy. CSS, on the other hand, doesn't. Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML. Be aware that overly nested rules will result in over-qualified CSS that could prove hard to maintain and is generally considered bad practice. When writing HTML you've probably noticed that it has a clear nested and visual hierarchy. CSS, on the other hand, doesn't. Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML. Be aware that overly nested rules will result in over-qualified CSS that could prove hard to maintain and is generally considered bad practice. 
+    Nesting Rules: When writing HTML you've probably noticed that it has a clear nested and visual hierarchy. CSS, on the other hand, doesn't. Sass will let you nest your CSS selectors in a way that follows the same visual hierarchy of your HTML. Be aware that overly nested rules will result in over-qualified CSS that could prove hard to maintain and is generally considered bad practice.
 
     Parent selector: (&) is a special selector invented by Sass that’s used in nested selectors to refer to the outer selector. It makes it possible to re-use the outer selector in more complex ways, like adding a pseudo-class or adding a selector before the parent.
 
     Placeholder selector: Sass has a special kind of selector known as a “placeholder”. It looks and acts a lot like a class selector, but it starts with a % and it's not included in the CSS output. In fact, any complex selector (the ones between the commas) that even contains a placeholder selector isn't included in the CSS, nor is any style rule whose selectors all contain placeholders. What’s the use of a selector that isn’t emitted? It can still be extended! Unlike class selectors, placeholders don’t clutter up the CSS if they aren’t extended and they don’t mandate that users of a library use specific class names for their HTML. Placeholder selectors are useful when writing a Sass library where each style rule may or may not be used. As a rule of thumb, if you’re writing a stylesheet just for your own app, it’s often better to just extend a class selector if one is available.
 
-    Extend/Inheritance: This is one of the most useful features of Sass. Using @extend lets you share a set of CSS properties from one selector to another. It helps keep your Sass very DRY. In our example we're going to create a simple series of messaging for errors, warnings and successes using another feature which goes hand in hand with extend, placeholder classes. A placeholder class is a special type of class that only prints when it is extended, and can help keep your compiled CSS neat and clean. There are often cases when designing a page when one class should have all the styles of another class, as well as its own specific styles. For example, the BEM methodology encourages modifier classes that go on the same elements as block or element classes. But this can create cluttered HTML, it's prone to errors from forgetting to include both classes, and it can bring non-semantic style concerns into your markup.
+    Extend/Inheritance: This is one of the most useful features of Sass. Using @extend lets you share a set of CSS properties from one selector to another. It helps keep your Sass very DRY.
 
     Nested Properties: Using nested properties, you can avoid rewriting CSS multiple times. For instance, use font as namespace, which uses some properties such as font-family, font-size, font-weight and font-variant. In normal CSS, you need to write these properties every time with namespace. Using SASS, you can nest the properties by writing the namespace only once. 
 
@@ -1452,13 +1515,17 @@ SCSS?
         length(list): Returns the length of the list.
         index(list, value): Returns the index position for the value in list.
 
+    Maps in Sass hold pairs of keys and values, and make it easy to look up a value by its corresponding key. They’re written (<expression>: <expression>, <expression>: <expression>). The expression before the : is the key, and the expression after is the value associated with that key. The keys must be unique, but the values may be duplicated. Unlike lists, maps must be written with parentheses around them. A map with no pairs is written ().
+    Maps are all about associating keys and values, so naturally there’s a way to get the value associated with a key: the map.get($map, $key) function! This function returns the value in the map associated with the given key. It returns null if the map doesn’t contain the key.
+    It’s also useful to add new pairs to a map, or to replace the value for an existing key. The map.set($map, $key, $value) function does this: it returns a copy of $map with the value at $key set to $value.
+
     Flow Control: Sass provides a number of at-rules that make it possible to control whether styles get emitted, or to emit them multiple times with small variations. They can also be used in mixins and functions to write small algorithms to make writing your Sass easier.
 
         @if/else: The @if rule is written @if <expression> { ... }, and it controls whether or not its block gets evaluated (including emitting any styles as CSS). The expression usually returns either true or false—if the expression returns true, the block is evaluated, and if the expression returns false it’s not.
 
         @each: The @each rule makes it easy to emit styles or evaluate code for each element of a list or each pair in a map. It’s great for repetitive styles that only have a few variations between them. It’s usually written @each <variable> in <expression> { ... }, where the expression returns a list. The block is evaluated for each element of the list in turn, which is assigned to the given variable name.
 
-        @for: The rule iswritten @for <variable> from <expression> to <expression> { ... } or @for <variable> from <expression> through <expression> { ... }, counts up or down from one number (the result of the first expression) to another (the result of the second) and evaluates a block for each number in between. Each number along the way is assigned to the given variable name. If to is used, the final number is excluded; if through is used, it's included.
+        @for: The rule is written @for <variable> from <expression> to <expression> { ... } or @for <variable> from <expression> through <expression> { ... }, counts up or down from one number (the result of the first expression) to another (the result of the second) and evaluates a block for each number in between. Each number along the way is assigned to the given variable name. If to is used, the final number is excluded; if through is used, it's included.
 
         @while: The rule is written @while <expression> { ... }, evaluates its block if its expression returns true. Then, if its expression still returns true, it evaluates its block again. This continues until the expression finally returns false.
 

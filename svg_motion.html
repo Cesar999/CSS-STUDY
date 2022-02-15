@@ -42,9 +42,9 @@
         <svg id="space" viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
             <path id="path1" d="M20,50 C20,-50 180,150 180,50 C180-50 20,150 20,50 z"/>
 
-            <use xlink:href="#space-ship" x="-5" y="-50" width="10" style="transform: rotateZ(45deg)">
-                <animateMotion dur="15s" repeatCount="indefinite" rotate="auto" keyPoints="0;0.1;0.4;0.6;0.9;1" keyTimes="0;0.2;0.35;0.65;0.8;1" calcMode="linear">
-                    <mpath xlink:href="#path1" />
+            <use href="#space-ship" x="-5" y="-50" width="10" style="transform: rotateZ(45deg)">
+                <animateMotion dur="10s" repeatCount="indefinite" rotate="auto" keyPoints="0;1" keyTimes="0;1" calcMode="linear">
+                    <mpath href="#path1" />
                 </animateMotion>
             </use>
           </svg>
